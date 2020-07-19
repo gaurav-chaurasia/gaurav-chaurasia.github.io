@@ -5,6 +5,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
         <link rel="stylesheet" href="./css/style.css">
+        <link rel="stylesheet" href="./css/slider.css">
+        <link rel="stylesheet" href="./css/query.css">
         <link rel="stylesheet" href="./vendors/css/scrollbar.css">
         <link rel="shortcut icon" href="./assets/img/favicon.svg" type="image/x-icon">
         <!--google fonts-->
@@ -16,13 +18,17 @@
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
             integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 
-        <title>Gaurav Chaurasia</title>
+        <title>Dragonball-z</title>
     </head>
 
 
     <body>
         <div class="cursor"></div>
-       
+        <div class="hamburger">
+            <div class="span"></div>
+            <div class="span"></div>
+            <div class="span"></div>
+        </div>
         <header class="row">
             <div>
                 <div class="logo">
@@ -35,11 +41,7 @@
                         <li class="project-link"><a href="#">projects</a></li>
                         <li class="manu-link"><a href="#">manus</a></li>
                     </div>
-                    <div class="hamburger">
-                        <div class="span"></div>
-                        <div class="span"></div>
-                        <div class="span"></div>
-                    </div>
+                   
                     <!-- <div class="hamburger">
                                     <span></span>
                                     <span></span>
@@ -52,7 +54,7 @@
         <div class="full-slider">
             <div class="slider">
                 <div class="row">
-                    <div class="social-links col-4">
+                    <div class="social-links">
                         <label for="social">social</label>
                         <ul>
                             <li><a href="#">github</a></li>
@@ -62,7 +64,7 @@
                             <li><a href="#">linkedin</a></li>
                         </ul>
                     </div>
-                    <div class="manu col-8">
+                    <div class="manu">
                         <label for="manu">manu</label>
                         <ul>
                             <li><a href="#">projects</a></li>
@@ -73,8 +75,8 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="email col-4">gaurav.181cv155@nitk.edu.in</div>
-                    <div class="social col-8">
+                    <div class="email col-md-4">gaurav.181cv155@nitk.edu.in</div>
+                    <div class="social col-md-6">
                         <svg class = "github" height="512pt" viewBox="0 0 24 24" width="512pt">
                             <path d="m12 .5c-6.63 0-12 5.28-12 11.792 0 5.211 3.438 9.63 8.205 11.188.6.111.82-.254.82-.567 0-.28-.01-1.022-.015-2.005-3.338.711-4.042-1.582-4.042-1.582-.546-1.361-1.335-1.725-1.335-1.725-1.087-.731.084-.716.084-.716 1.205.082 1.838 1.215 1.838 1.215 1.07 1.803 2.809 1.282 3.495.981.108-.763.417-1.282.76-1.577-2.665-.295-5.466-1.309-5.466-5.827 0-1.287.465-2.339 1.235-3.164-.135-.298-.54-1.497.105-3.121 0 0 1.005-.316 3.3 1.209.96-.262 1.98-.392 3-.398 1.02.006 2.04.136 3 .398 2.28-1.525 3.285-1.209 3.285-1.209.645 1.624.24 2.823.12 3.121.765.825 1.23 1.877 1.23 3.164 0 4.53-2.805 5.527-5.475 5.817.42.354.81 1.077.81 2.182 0 1.578-.015 2.846-.015 3.229 0 .309.21.678.825.56 4.801-1.548 8.236-5.97 8.236-11.173 0-6.512-5.373-11.792-12-11.792z"/>
                         </svg>
@@ -100,26 +102,34 @@
                 </div>
             </div>
         </div>
-
-        <section class="main-page container">   
-            <div class="animation-blocks"></div>
-            <div class="animation-blocks"></div>
-            <div class="animation-blocks"></div>
-            <div class="animation-blocks"></div>
-            <div class="animation-blocks"></div>
-            <div class="animation-blocks"></div>
-            <div class="animation-blocks"></div>
-            <div class="animation-blocks"></div>
-            <div class="animation-blocks"></div>
-            <div class="animation-blocks"></div>
-
+        <div class="blocks">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <section class="main-page">   
+            <div class="loder">
+                <div class="loder-0"></div>
+                <div class="loder-1"></div>
+                <div class="loder-2"></div>
+                <div class="loder-3"></div>
+                <div class="loder-4"></div>
+                <div class="loder-5"></div>
+            </div>
             <div class="main-page-content">
                 Hey there, it’s me! "gaurav chaurasia"
                 Welcome to my personal webpage
                 Do check-out other section of my site for more info
                 like projects, resume etc...
-                <button class="see-more">see more</button>
             </div>
+            <button class="see-more">see more</button>
         </section>
 
         <section class="pojects container">
@@ -187,6 +197,19 @@
         </section>
 
         <section class="about-me container">
+            <div class="dot-box">
+                <span></span><span></span><span></span><span></span><span></span>
+                <br>
+                <span></span><span></span><span></span><span></span><span></span>
+                <br>
+                <span></span><span></span><span></span><span></span><span></span>
+                <br>
+                <span></span><span></span><span></span><span></span><span></span>
+                <br>
+                <span></span><span></span><span></span><span></span><span></span>
+            </div>
+            <div class="circle-1"></div>
+            <div class="circle-2"></div>
             <div class="about-img">
                 <!-- <img src="./assets/img/gaurav_img.jpg" alt=""> -->
             </div>
@@ -258,6 +281,8 @@
         </footer>
 
         <script src="./js/app.js"></script>
+        <script src="./js/animation.js"></script>
+     
         <!--bootstrap-->
         <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
             integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"

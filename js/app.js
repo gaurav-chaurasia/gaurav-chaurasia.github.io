@@ -70,5 +70,30 @@ $('.hamburger').click(function () {
     $('.span').eq(1).toggleClass('slide');
     $('.span').eq(0).toggleClass('cross-down');
     $('.span').eq(2).toggleClass('cross-up');
-    console.log($('.span')[1]);
+    // console.log($('.span')[1]);
 });
+
+$('.hamburger').click(function () {
+    $('.slider').toggleClass('show-slider');
+    $('.full-slider').toggleClass('show-full-slider');
+});
+
+$(document).mousemove(function () {
+    if ($(".slider:hover").length == 0) {
+        $('.full-slider').click(function () {
+            $('.slider').toggleClass('show-slider');
+            $('.full-slider').toggleClass('show-full-slider');
+            $('.span').eq(1).toggleClass('slide');
+            $('.span').eq(0).toggleClass('cross-down');
+            $('.span').eq(2).toggleClass('cross-up');
+        });
+    }
+});
+// document.onreadystatechange = function () {
+//     if (document.readyState === "loading") {
+//         document.querySelector("body").style.visibility = "hidden";
+//         document.querySelector(".loder").style.visibility = "visible";
+//     } else {
+//         document.querySelector("body").style.visibility = "visible";
+//     }
+// }; 

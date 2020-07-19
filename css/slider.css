@@ -1,0 +1,121 @@
+@media (max-width: 1300px) {
+    .nav-links {
+        right: 12%;
+    }
+}
+@media (max-width: 1000px) {
+    .slider{
+        width: 80% !important;
+        top: 0 !important;
+        right: -100% !important;
+    }
+}
+@media (max-width: 850px) {
+        .slider{
+        width: 90% !important;
+        top: 0 !important;
+        right: -100% !important;
+    }
+    .nav-links {
+        right: 15%;
+    }
+    .social {
+        margin-left: 10%;
+        margin-top: 0%;
+    }
+}
+@media (max-width: 650px) {
+    .slider{
+        width: 100% !important;
+        top: 0 !important;
+        right:-100% !important;
+    }
+    .nav-links {
+        right: 20%;
+    }
+    .project-link {
+        visibility: hidden;
+    }
+}
+
+.full-slider {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    min-height: 100vh;
+    overflow-x: hidden;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+    z-index: 1000;
+    transition-duration: 0.5s;
+    transition: 0.5s ease-out;
+}
+
+.show-slider {
+    transform: translateX(-100%);
+    transition-duration: 0.5s;
+}
+.show-full-slider {
+    transform: translateX(100%);
+    transition-duration: 0.5s;
+}
+.stop-scroll {
+    overflow: hidden;
+}
+.slider {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 55%;
+    right: -60%;
+    background-color: #ffffff;
+    min-height: 100vh;
+    opacity: 1;
+    transition-duration: 0.5s;
+    transition: 0.5s ease-out;
+/* 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; */
+}
+
+.social-links {
+    width: 30%;
+    margin-left: 10%;
+    margin-top: 10%;
+}
+.social-links ul li a {
+    /* height: 50px; */
+    font-size: 0.7rem; 
+    margin: 25px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.manu {
+    width: 60%;
+    margin-top: 10%;
+}
+.manu ul li a {
+    /* height: 50px; */
+    font-size: 2rem; 
+    margin-bottom: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.email {
+    font-size: 0.7rem;   
+    width: 30%;
+    margin-top: 5%;
+    margin-left: 10%;
+}
+.social {
+    width: 60%;
+    padding-right: 4rem;
+    transform: translateY(-25%);
+    margin-top: 5%;
+}
