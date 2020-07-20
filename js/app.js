@@ -1,6 +1,11 @@
 /* all consts will go here at the top */ 
 const cursor = $('.cursor');
-
+const full_slider = $('.full-slider');
+const slider = $('.slider');
+const span0 = $('.span').eq(0);
+const span1 = $('.span').eq(1);
+const span2 = $('.span').eq(2);
+const hamburger = $('.hamburger');
 
 /* cursor animation code starts below*/ 
 $(document).mousemove(function(e) {
@@ -55,7 +60,7 @@ $('img').on({
         cursor.toggleClass('on-img');
     }
 });
-$('.hamburger').on({
+hamburger.on({
     mouseenter: function () {
         cursor.toggleClass('on-cross');
         // cursor.toggleClass('cursor-invert');
@@ -65,27 +70,29 @@ $('.hamburger').on({
         // cursor.toggleClass('cursor-invert');
     }
 });
-$('.hamburger').click(function () {
+hamburger.click(function () {
     // document.querySelector('.nav').classList.toggle('nav-toggle');
-    $('.span').eq(1).toggleClass('slide');
-    $('.span').eq(0).toggleClass('cross-down');
-    $('.span').eq(2).toggleClass('cross-up');
+    span1.toggleClass('slide');
+    span0.toggleClass('cross-down');
+    span2.toggleClass('cross-up');
     // console.log($('.span')[1]);
 });
 
-$('.hamburger').click(function () {
-    $('.slider').toggleClass('show-slider');
-    $('.full-slider').toggleClass('show-full-slider');
+hamburger.click(function () {
+    slider.toggleClass('show-slider');
+    full_slider.toggleClass('show-full-slider');
+    $('.project-link').toggleClass('hide');
+    $('.manu-link').toggleClass('hide');
 });
 
 $(document).mousemove(function () {
     if ($(".slider:hover").length == 0) {
-        $('.full-slider').click(function () {
-            $('.slider').toggleClass('show-slider');
-            $('.full-slider').toggleClass('show-full-slider');
-            $('.span').eq(1).toggleClass('slide');
-            $('.span').eq(0).toggleClass('cross-down');
-            $('.span').eq(2).toggleClass('cross-up');
+        full_slider.click(function () {
+            slider.toggleClass('show-slider');
+            full_slider.toggleClass('show-full-slider');
+            span1.toggleClass('slide');
+            span0.toggleClass('cross-down');
+            span2.toggleClass('cross-up');
         });
     }
 });

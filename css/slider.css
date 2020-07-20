@@ -46,7 +46,7 @@
     min-height: 100vh;
     overflow-x: hidden;
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
-    z-index: 1000;
+    z-index: 1010;
     transition-duration: 0.5s;
     transition: 0.5s ease-out;
 }
@@ -81,8 +81,9 @@
 }
 
 .social-links {
-    width: 30%;
+    /* width: 30%; */
     margin-left: 10%;
+    margin-right: 10%;
     margin-top: 10%;
 }
 .social-links ul li a {
@@ -95,7 +96,7 @@
 }
 
 .manu {
-    width: 60%;
+    /* width: 60%; */
     margin-top: 10%;
 }
 .manu ul li a {

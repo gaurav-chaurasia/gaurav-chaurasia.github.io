@@ -8,6 +8,10 @@ font-family: 'Montserrat', sans-serif; */
 .center {
     text-align: center;
 }
+.hide {
+    transform: scale(0);
+    transition: 0.5 ease-in-out;
+}
 html {
     background-color: #fff;  
     color: #000;
@@ -36,6 +40,9 @@ label {
 
 section {
     min-height: 100vh;
+    /* z-index: 1002; */
+    position: relative;
+    overflow: hidden;
 }
 .cursor {
     position: absolute;
@@ -156,10 +163,14 @@ nav {
     height: 100%;
 }
 .nav-links{
-    position: absolute;
-    transform: translateY(-50%);
+    position: fixed;
+    /* transform: translateY(100vh); */
+    z-index: 9998;
+    top: 5vh;
     right: 10%;
     transition: 0.5s ease-in-out;
+    display: flex;
+    justify-content: center;
 }
 .project-link, .manu-link {
     margin-left: 15%;
@@ -214,47 +225,77 @@ nav {
 /* main section */
 
 .main-page {
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    transition: 0.5s ease-in-out;
+    animation: fadeinx;
+    animation-play-state: paused;
+    animation-delay: 2.5s;
+    animation-duration: 1s;
+}
+
+
+.main-page-content {
+     display: flex;
+    flex-direction: column;
+    justify-content: center;
     width: 100%;
+    /* height: 100vh; */
+    position: relative;
     padding-left: 10%;
     padding-right: 20%;
     font-size: 1.4rem;
+    z-index: 1000;
+    /* padding-top: 100px; */
 }
+
 .see-more {
     font-size: 1rem;
     width: 10rem;
+    z-index: 1000;
     background-color: transparent;
     border: 1px solid #979797;
     border-radius: 50px;
-    margin-top: 5%;
+    /* transform: translateY(-50%); */
+    margin-left: 10%;
+    margin-top: 1%;
     padding: 10px 5px;
+}
+.see-more:focus {
+    outline: none;
 }
 .see-more:hover {
     background-color: #000000;
     color: #fff;
     transition: 0.2s ease-in-out;
 }
-
+.b {
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
 .blocks {
-    position: fixed;
+    position: absolute;
     width: 100vw;   
     height: 100vh;
     top: 0;
     left: 0;
-    z-index: 9999;
-    pointer-events: none;
     overflow: hidden;
+    z-index: 999;
+    /* display: inline-block; */
+    pointer-events: none;
     display: grid;
     grid-template-columns: repeat(10, auto);
 }
 .blocks div {
-    background-color: #fff;
+    background-color: rgb(65, 65, 65);
     height: 100vh;
     transition: background-color 1s;
+    overflow: hidden;
 }
-.loder {
+/* .loder {
     position: absolute;
     width: 150vw;   
     height: 100vh;
@@ -337,4 +378,4 @@ nav {
     .loder-3 { transform: scale(2) rotate(50deg) translate(300%, -70%);}
     .loder-4 { transform: scale(2) rotate(50deg) translate(410%, -70%);}
     .loder-5 { transform: scale(2) rotate(50deg) translate(520%, -70%);}
-}
+} */
