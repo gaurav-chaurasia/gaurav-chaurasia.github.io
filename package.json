@@ -11,5 +11,11 @@
     "url": "github.com/gaurav-chaurasia/gaurav-chaurasia.github.io"
   },
   "author": "Gaurav Chaurasia",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "jquery": "^3.5.1",
+    "animejs": "^3.0.1",
+    "aos": "^2.3.1",
+    "bootstrap": "^4.5.0"
+  }
 }

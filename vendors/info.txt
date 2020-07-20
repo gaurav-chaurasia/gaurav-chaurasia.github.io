@@ -1,0 +1,16 @@
+jquery
+animejs
+bootstrap
+    i.css
+    ii.js (
+        a,
+        b,
+        c
+    )
+animate on scroll
+    i.js
+    ii.css
+google fonts
+    monsarrate-300-400
+    Amatic-300
+chrome sidebar

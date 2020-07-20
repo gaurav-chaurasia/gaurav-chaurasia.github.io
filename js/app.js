@@ -32,14 +32,14 @@ $('li a').on({ // making cursor enlarge on hovering links
         cursor.removeClass('cursor-invert');
     }
 });
-$('a').on({ // making cursor enlarge on hovering links
-    mouseenter: function () {
-        cursor.addClass('animate-cursor');
-    },
-    mouseleave: function () {
-        cursor.removeClass('animate-cursor');
-    }
-});
+// $('a').on({ // making cursor enlarge on hovering links
+//     mouseenter: function () {
+//         cursor.addClass('animate-cursor');
+//     },
+//     mouseleave: function () {
+//         cursor.removeClass('animate-cursor');
+//     }
+// });
 // console.log($("button"));
 // console.log($(".cursor"));
 
@@ -93,6 +93,8 @@ $(document).mousemove(function () {
             span1.toggleClass('slide');
             span0.toggleClass('cross-down');
             span2.toggleClass('cross-up');
+            $('.project-link').toggleClass('hide');
+            $('.manu-link').toggleClass('hide');
         });
     }
 });

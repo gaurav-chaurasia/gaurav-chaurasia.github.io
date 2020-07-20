@@ -1,34 +1,43 @@
-$(window).ready(function() {
-    let tl = anime.timeline({
-        easing: 'easeOutExpo',
-        duration: 750
-    });
+AOS.init(); // initializing animate on scroll
 
-    tl.add({
-        targets: '.blocks div',
-        width: '100%',
-        backgroundColor: 'rgb(197, 197, 255)',
-        delay: anime.stagger(100) // increase delay by 100ms for each elements.
+$(".blocks").css("visibility", "hidden");
+
+$(window).ready(function () {
+  $(".blocks").css("visibility", "visible");
+
+  let tl = anime.timeline({
+    easing: "easeOutExpo",
+    duration: 750,
+  });
+
+  tl.add({
+    targets: ".blocks div",
+    width: "100%",
+    backgroundColor: "rgb(54, 255, 211)",
+    delay: anime.stagger(100), // increase delay by 100ms for each elements.
+  })
+    .add({
+      targets: ".blocks div",
+      width: "90%",
+      backgroundColor: "rgb(235, 235, 235)",
     })
-        .add({
-            targets: '.blocks div',
-            width: '90%',
-            backgroundColor: 'rgb(235, 235, 255)'
-        })
-        .add({
-            targets: 'body',
-            top: '20%',
-            opacity: 1,
-        }, '-=1600')
-        .add({
-            targets: '.blocks',
-            scale: '2',
-            // scaleX: '2',
-            translateX: '40%',
-            rotate: '45deg',
-            duration: 2000,
-        });
-    $('.main-page').css('animation-play-state', 'running');
+    .add(
+      {
+        targets: "body",
+        top: "20%",
+        opacity: 1,
+      },
+      "-=1600"
+    )
+    .add({
+      targets: ".blocks",
+      scale: "2",
+      // scaleX: '2',
+      translateX: "40%",
+      rotate: "45deg",
+      duration: 2000,
+    });
+  $(".main-page").css("animation-play-state", "running");
 });
 
 // let grids = document.querySelectorAll('.blocks div');
@@ -40,10 +49,10 @@ $(window).ready(function() {
 //         setTimeout(() => {
 //             grid.style.backgroundColor = 'rgb(119, 119, 119)'
 //         }, num += 100);
-//     }); 
+//     });
 //     delay(300).then(() => {
 //         setTimeout(() => {
-//             grid.style.backgroundColor = 'rgb(233, 233, 233)', 
+//             grid.style.backgroundColor = 'rgb(233, 233, 233)',
 //             grid.style.width = '90%',
 //             grid.style.opacity = '0.5'
 //         }, num += 100);
@@ -53,7 +62,7 @@ $(window).ready(function() {
 //             grid.style.backgroundColor = 'rgb(233, 233, 233)',
 //             grid.style.opacity = '0.0'
 //             // grid.style.psition = 'absolute',
-//             // grid.style.transform = 'scale(0) translateY(100px)' 
+//             // grid.style.transform = 'scale(0) translateY(100px)'
 //         }, num += 100);
 //     });
 // });
