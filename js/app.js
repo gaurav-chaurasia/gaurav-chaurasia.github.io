@@ -8,6 +8,32 @@ const span1 = $(".span").eq(1);
 const span2 = $(".span").eq(2);
 const hamburger = $(".hamburger");
 
+/*
+****************** 
+// ?contact form functionality
+   using google forms
+******************
+*/ 
+let submitted = false;
+
+$('#google-form').on('submit', function() {
+  $('#google-form *').toggleClass('hide');
+  $('#google-form *').css('display', 'none');
+  // $('.submit-message').toggleClass('hide');
+  $('.submit-message').css('transform', 'translateX(0%)');
+  $('.submit-message').css('display', 'flex');
+});
+
+$('.close').click(function() {
+  $('#google-form *').toggleClass('hide');
+  $('#google-form *').css('display', 'flex');
+  // $('.submit-message').toggleClass('hide');
+  $('.submit-message').css('transform', 'translateX(-200%)');
+  $('.submit-message').css('display', 'none');
+  location.reload(true); 
+  // $('#google-form').reset();
+  submitted = false;
+});
 /* cursor animation code starts below*/
 
 $(document).mousemove(function (e) {

@@ -395,7 +395,7 @@ nav {
   left: 0;
   z-index: 103;
   transform: translateX(-50%);
-  transform: translateY(400%);
+  transform: translateY(350%);
 }
 
 .project-content {
@@ -636,4 +636,11 @@ svg {
 
 .twitter:hover, .instagram:hover, .facebook:hover, .github:hover, .linkedin:hover {
 	fill: #55acee;
+}
+
+.submit-message {
+  position: absolute;
+  transform: translateX(-200%);
+  display: none;
+  transition: 0.5s ease-in-out;
 }

@@ -424,12 +424,29 @@
         <div class="contact-me">
             <div class="container">
                 <h3>contact me</h3>
-                <form action="#" method="POST">
-                    <input type="name" placeholder="name"> <br>
-                    <input type="email" placeholder="your email"> <br>
-                    <input type="text" placeholder="your query"> <br>
-                    <button class="button" >Submit</button>
+                <div class="submit-message alert alert-dark alert-dismissible" role="alert">
+                    <h4 class="alert-heading">Thank you for you Response!!!</h4>
+                    <p>Aww yeah, you successfully submit the form. I'II contact you soon.</p>
+                    <button class="close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <form id="google-form" action="https://docs.google.com/forms/d/e/1FAIpQLSdq0GRbSxu_RI0ER_2O7Imyh6jG521jAmW_KI_wx3YrPDOvjA/formResponse?" target="hidden_iframe" onsubmit="submitted=true;">
+                    
+                    <label for="entry.2005620554"></label>
+                    <input type="name" name="entry.2005620554" id="entry.2005620554" placeholder="name"> <br>
+                    
+                    <label for="entry.1045781291"></label>
+                    <input type="email" name="entry.1045781291" id="entry.1045781291" placeholder="your email"> <br>
+                    
+                    <label for="entry.839337160"></label>
+                    <input type="text" name="entry.839337160" id="entry.839337160" placeholder="your query"> <br>
+                    
+                    <button class="button" type="submit" >Submit</button>
                 </form>
+
+            <iframe name="hidden_iframe" id="hidden_iframe" style="display: none;" onload="if(submitted) {}"></iframe>
+
             </div>
         </div>
 
