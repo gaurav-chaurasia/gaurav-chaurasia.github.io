@@ -105,7 +105,7 @@ $(".footer-links-link a").on({
 // console.log($("button"));
 // console.log($(".cursor"));
 
-$(".brand").on({
+$(".brand, .contact-me h3").on({
   // showing owns img on hover over name
   mouseenter: function () {
     cursor.toggleClass("on-logo");
