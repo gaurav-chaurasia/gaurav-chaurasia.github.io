@@ -120,3 +120,6 @@
     transform: translateY(-25%);
     margin-top: 5%;
 }
+.social svg {
+    margin-right: 3%;
+}

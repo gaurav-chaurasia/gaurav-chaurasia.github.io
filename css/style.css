@@ -1,5 +1,12 @@
 /* font-family: 'Amatic SC', cursive;
 font-family: 'Montserrat', sans-serif; */
+
+/* important reusable classes */
+/* 
+	fade: simply make element
+	center: align item center
+	hide: shift element towards right out of view
+*/
 * {
   margin: 0;
   padding: 0;
@@ -8,9 +15,17 @@ font-family: 'Montserrat', sans-serif; */
 .center {
   text-align: center;
 }
+.fade {
+	opacity: 0;
+	transition: 0.3s ease-in-out;
+	transition-duration: 0.3s;
+}
 .hide {
   transform: translateX(100vw);
   transition: 0.5 ease-in-out;
+}
+input:focus {
+	outline: none;
 }
 html {
   background-color: #fff;
@@ -39,10 +54,11 @@ label {
 }
 
 section {
-  min-height: 100vh;
-  /* z-index: 1002; */
-  position: relative;
-  overflow: hidden;
+	background-color: #fff;
+	min-height: 100vh;
+	z-index: 102;
+	position: relative;
+	overflow: hidden;
 }
 .cursor {
   position: absolute;
@@ -65,12 +81,6 @@ section {
 }
 .animate-cursor {
   transform: translate(-50%, -50%) scale(5);
-}
-svg {
-  height: 1.5rem;
-  width: 1.5rem;
-  fill: grey;
-  opacity: 0.5;
 }
 
 .on-logo {
@@ -116,10 +126,6 @@ li a:hover {
   align-items: center;
   background-size: cover;
   background-position: center;
-}
-
-footer {
-  background-color: #f5f5f5;
 }
 
 /* header part starts here */
@@ -383,17 +389,18 @@ nav {
 
 .goku-img {
   width: 15rem;
-  opacity: 0.5;
+  opacity: 0.3;
   height: auto;
   position: absolute;
   left: 0;
+  z-index: 103;
   transform: translateX(-50%);
-  transform: translateY(220%);
+  transform: translateY(400%);
 }
 
 .project-content {
   font-size: 0.8rem;
-  margin-top: 5%;
+  margin-top: 2%;
   padding-left: 10px;
 }
 .project-img {
@@ -402,18 +409,30 @@ nav {
 }
 .project-title {
   position: absolute;
+  pointer-events: none;
   top: 30%;
   left: 10%;
-  transform: translateY(-50%);
+  transform: scale(1) translateY(-50%);
+  transition: 0.3s ease-in-out;
+  transition-duration: 0.3s;
 }
 .card {
-  border-radius: 0;
   margin-bottom: 20px;
+  border-radius: 0 !important;
 }
 .card:hover {
   border: 1px solid #000000;
-  border-radius: 0;
   /* box-shadow: 5px 5px 10px 5px rgba(0, 0, 0, 0.1); */
+}
+.tech {
+  margin-top: 2%;
+  padding-left: 10px;
+}
+.tech span {
+  opacity: 0.8;
+  font-size: 0.5rem;
+  padding: 5px 10px;
+  border-radius: 5px;
 }
 .img1 {
   background: #3c3b3f; /* fallback for old browsers */
@@ -480,4 +499,141 @@ nav {
   opacity: 0.9;
   color: #000;
   transform: scale(1);
+}
+
+.about-me {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.about-me::after {
+	display: block;
+    height: 2px;
+    background-color: #000000;
+    content: "";
+    width: 100px;
+    margin: 0 auto;
+    margin-top: 30px;
+}
+
+.resume {
+	font-weight: 400;
+}
+
+.resume:hover {
+	color: #000000;
+	text-decoration: none;
+}
+
+.link-to-projects:hover {
+	text-decoration: none;
+	color: #000000;
+	margin-right: 100px;
+}
+
+
+/* contact form */
+.contact-me {
+	background-color: #fff;
+	min-height: 50vh;
+	z-index: 102;
+	position: relative;
+	overflow: hidden;
+	padding: 5rem 0;
+}
+
+.contact-me * {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+/* contact form button animation */
+
+.button {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	font-size: 1rem;
+	width: 10rem;
+	z-index: 1000;
+	background-color: transparent;
+	border: 1px solid #979797;
+	border-radius: 50px !important;
+	/* transform: translateX(25%); */
+	/* margin-left: 30%; */
+	/* margin-top: 1%; */
+	padding: 10px 5px;
+}
+
+.button:focus {
+  outline: none;
+}
+.button:hover {
+  background-color: #000000;
+  color: #fff;
+  transition: 0.2s ease-in-out;
+}
+
+form input {
+	border: 0;
+	width: 150%;
+	border-bottom: 1px solid #000000;
+	margin: 5%;
+	/* transform: translateX(-20%); */
+}
+
+.footer-cover {
+	width: 100%;
+	height: 50vh;
+	pointer-events: none;
+	background: transparent;
+}
+footer {
+	background-color: #000000;
+	width: 100%;
+	height: 50vh;
+	position: fixed;
+	left: 0;
+	opacity: 0;
+	bottom: 0;
+	z-index: 1;
+}
+footer * {
+	color: #fff !important;
+}
+.footer-links {
+	margin-top: 5rem;
+	margin-bottom: 1.5rem	;
+}
+.footer-links-link a {
+	margin-right: 5%;
+	font-weight: lighter;
+}
+.footer-links-icon svg {
+	margin-right: 5%;
+}
+.footer-links-link a:hover {
+	text-decoration: none;
+}
+svg {
+  height: 1.5rem;
+  width: 1.5rem;
+  fill: #383838;
+  opacity: 1;
+}
+
+.tag {
+	position: absolute;
+	bottom: 10%;
+	opacity: 0.5;
+	letter-spacing: 1.5px;
+	font-weight: lighter;
+	font-size: 0.8rem;
+}
+
+.twitter:hover, .instagram:hover, .facebook:hover, .github:hover, .linkedin:hover {
+	fill: #55acee;
 }
