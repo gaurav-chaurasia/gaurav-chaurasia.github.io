@@ -1,1 +1,61 @@
 /* main section */
+
+@media (max-width: 480px) {
+    .logo {
+        left: 8%;
+    }
+    .manu-link {
+        visibility: hidden;
+    }
+    .hamburger {
+        right: 8%;
+    }
+    .main-page-content {
+        font-size: 1.1rem;
+        margin-top: 25% !important;
+    }
+    .see-more {
+        margin-top: 5%;
+    }
+    .blocks {
+        grid-template-columns: repeat(5, auto);
+    }
+    .project-content {
+        font-size: 0.6rem;
+    }
+    .project-title {
+        left: 5%;
+    }
+    .link-to-projects svg {
+        transform: scale(0.7);
+    }
+    .about-content {
+        font-size: 15px;
+        text-align: justify;
+    }
+    .about-img {
+        margin-top: 40px;
+    }
+    .goku-img {
+        left: 4%;
+    }
+    form input {
+        width: 100%;
+    }
+    .footer-links {
+        margin-top: 2rem;
+        font-size: 0.8rem;
+    }
+    .footer-links-link {
+        margin-bottom: 20px;
+    }
+    .footer-links-link a {
+        margin-right: 2%;
+    }
+    .footer-links-icon svg {
+        margin-right: 5%;
+    }
+    .tag {
+        font-size: 0.7rem;
+    }
+}

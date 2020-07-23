@@ -142,7 +142,7 @@ header {
   align-content: center;
   z-index: 999;
   background-color: #fff;
-  opacity: 0.95;
+  opacity: 0.9;
   box-shadow: 0 0 rgba(0, 0, 0, 0.5) rgba(0, 0, 0, 0.5);
   background-color: rgba(255, 255, 255, 0.95) rgba(1, 1, 1, 0.5);
   backdrop-filter: saturate(180%) blur(10px);
@@ -412,6 +412,9 @@ nav {
 .project-img {
   overflow: hidden;
   color: #fff;
+  height: auto;
+  background-position: center;
+  background-size: cover;
 }
 .project-title {
   position: absolute;
@@ -514,7 +517,7 @@ nav {
 }
 
 .about-me::after {
-	display: block;
+    display: block;
     height: 2px;
     background-color: #000000;
     content: "";
