@@ -115,6 +115,16 @@ $(".brand, .contact-me h3").on({
   },
 });
 
+$(".my-name").on({
+  // showing owns img on hover over name
+  mouseenter: function () {
+    cursor.toggleClass("on-name");
+  },
+  mouseleave: function () {
+    cursor.toggleClass("on-name");
+  },
+});
+
 $("img").on({
   mouseenter: function () {
     cursor.toggleClass("on-img");
