@@ -20,6 +20,9 @@
     .blocks {
         grid-template-columns: repeat(5, auto);
     }
+    #projects {
+        background-color: rgb(251, 251, 251);
+    }
     .project-content {
         font-size: 0.6rem;
     }

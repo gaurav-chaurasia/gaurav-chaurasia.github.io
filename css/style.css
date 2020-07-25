@@ -410,7 +410,9 @@ nav {
   transform: translateX(-50%);
   transform: translateY(350%);
 }
-
+#projects {
+  padding-bottom: 50px;
+}
 .project-content {
   font-size: 0.8rem;
   margin-top: 2%;
@@ -442,6 +444,7 @@ nav {
 .card:hover {
   /* border: 1px solid #000000; */
   box-shadow: 1px 1px 5px 5px rgba(150, 150, 150, 0.1);
+  transform: translateY(-5px) !important;
   /* box-shadow: 5px 5px 10px 5px rgba(0, 0, 0, 0.1); */
 }
 .tech {
@@ -548,8 +551,7 @@ nav {
 
 .link-to-projects:hover {
 	text-decoration: none;
-	color: #000000;
-	margin-right: 100px;
+  color: #000000;
 }
 
 
