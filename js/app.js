@@ -211,10 +211,10 @@ $('.img4').on({
 
 
 function isInViewport(element) {
-	var elementTop = $(element).offset().top;
-	var elementBottom = elementTop + $(element).outerHeight();
-	var viewportTop = $(window).scrollTop();
-	var viewportBottom = viewportTop + $(window).height();
+	let elementTop = $(element).offset().top;
+	let elementBottom = elementTop + $(element).outerHeight();
+	let viewportTop = $(window).scrollTop();
+	let viewportBottom = viewportTop + $(window).height();
 	return elementBottom > viewportTop && elementTop < viewportBottom;
 };
 
@@ -223,12 +223,15 @@ $(window).on( {
 	scroll: function() {
 		if (isInViewport('.b')) {
 		// console.log('success.')
-		$('footer').css('opacity', '0');
+      $('footer').css('opacity', '0');
+      $('header').css('box-shadow', '0 0 0px 0px rgba(0, 0, 0, 0.1)')
 		} else {
 			//  Remove class
 			// $('.main-page').removeClass('test');
 			// console.log('No success.')
-			$('footer').css('opacity', '1');
+      $('footer').css('opacity', '1');
+      $('header').css('box-shadow', '0 0 20px 20px rgba(150, 150, 150, 0.1)')
+
 		}
 	}
 });

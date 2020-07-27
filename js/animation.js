@@ -14,7 +14,7 @@ $(window).ready(function () {
       tl.add({
         targets: ".blocks div",
         width: "100%",
-        backgroundColor: "rgb(54, 255, 211)",
+        backgroundColor: "rgb(197, 197, 255)",
         delay: anime.stagger(100), // increase delay by 100ms for each elements.
       })
         .add({
