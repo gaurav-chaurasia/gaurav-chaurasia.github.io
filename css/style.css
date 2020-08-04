@@ -141,7 +141,7 @@ li a:hover {
 header {
   position: fixed;
   top: 0;
-  width: 101vw;
+  width: 105vw;
   height: 15vh;
   overflow: hidden;
   display: flex;
