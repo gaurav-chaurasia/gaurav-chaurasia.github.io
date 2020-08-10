@@ -24,7 +24,11 @@
         background-color: rgb(251, 251, 251);
     }
     .card {
-        box-shadow: 0px 0px 5px 5px rgba(200, 200, 200, 0.1);
+        box-shadow: 0 5px 15px 0 rgba(0,0,0,0.08);
+    }
+    .card:hover {
+        box-shadow: 0 5px 15px 0 rgba(0,0,0,0.08);
+        transform: translateY(0px) !important;
     }
     .project-content {
         font-size: 0.6rem;

@@ -166,7 +166,7 @@ header div {
   transform: translateY(-50%);
 }
 .brand {
-  font-family: "Amatic SC", cursive;
+  font-family: "Amatic SC";
   font-size: 2rem;
   font-weight: 300;
   width: 100%;
@@ -201,7 +201,7 @@ nav {
   top: 7.5vh;
   cursor: pointer;
   z-index: 9998;
-  transition: 0.5s ease-in-out;
+  transition: 0.2s ease-in-out;
 }
 
 .span {
@@ -209,7 +209,7 @@ nav {
   width: 2rem;
   height: 0.1rem;
   background-color: #000;
-  transition: 0.5s ease-out;
+  transition: 0.2s ease-out;
 }
 .hamburger div:nth-child(1) {
   top: 0px;
@@ -222,7 +222,7 @@ nav {
 }
 .slide {
   transform: translateX(1rem) scale(0);
-  transition: 0.5s ease-out;
+  transition: 0.2s ease-out;
 }
 
 .cross-down {
@@ -433,7 +433,7 @@ nav {
 }
 .card:hover {
   /* border: 1px solid #000000; */
-  box-shadow: 1px 1px 5px 5px rgba(150, 150, 150, 0.1);
+  box-shadow: 0 5px 15px 0 rgba(0,0,0,0.08);
   transform: translateY(-5px) !important;
   /* box-shadow: 5px 5px 10px 5px rgba(0, 0, 0, 0.1); */
 }
