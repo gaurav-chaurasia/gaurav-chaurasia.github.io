@@ -56,7 +56,7 @@ label {
 
 section {
 	background-color: #fff;
-	min-height: 100vh;
+	/* min-height: 100vh; */
 	z-index: 102;
 	position: relative;
 	overflow: hidden;
@@ -407,7 +407,7 @@ nav {
   font-size: 0.8rem;
   margin-top: 2%;
   padding-left: 10px;
-  color: #747474;
+  color: #20123a;
 }
 .project-img {
   overflow: hidden;
@@ -426,7 +426,7 @@ nav {
   transition-duration: 0.3s;
 }
 .card {
-  margin-bottom: 20px;
+  margin-bottom: 50px;
   border: none !important;
   /* box-shadow: 0px 0px 5px 5px rgba(200, 200, 200, 0.1); */
   border-radius: 0 !important;
@@ -552,15 +552,31 @@ nav {
 	z-index: 102;
 	position: relative;
 	overflow: hidden;
-	padding: 5rem 0;
+  padding-top: 5rem;
+  padding-bottom: 2rem;
 }
-
+.contact-img {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.contact-img img {
+  width: 90%;
+  height: auto;
+}
+/* 
 .contact-me * {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-}
+} */
 
 /* contact form button animation */
 
@@ -571,9 +587,11 @@ nav {
 	font-size: 1rem;
 	width: 10rem;
 	z-index: 1000;
-	background-color: transparent;
-	border: 1px solid #979797;
-	border-radius: 50px !important;
+  background-color: #000000;
+  color: #fff;
+	/* background-color: transparent; */
+  border: 1px solid #000000;
+	/* border-radius: 50px !important; */
 	/* transform: translateX(25%); */
 	/* margin-left: 30%; */
 	/* margin-top: 1%; */
@@ -584,17 +602,29 @@ nav {
   outline: none;
 }
 .button:hover {
-  background-color: #000000;
-  color: #fff;
+  background-color: transparent;
+  border: 1px solid #000000;
+  /* background-color: #000000; */
+  color: #000000;
   transition: 0.2s ease-in-out;
 }
 
 form input {
-	border: 0;
-	width: 150%;
-	border-bottom: 1px solid #000000;
-	margin: 5%;
+	/* border: 0; */
+	width: 100%;
+	border: 1px solid #979797;
+	/* margin: 5% 0; */
 	/* transform: translateX(-20%); */
+}
+
+textarea {
+  width: 100%;
+  border-radius: 0;
+	border: 1px solid #979797;
+}
+
+form input:focus {
+	border: 2px solid #000000;
 }
 
 .footer-cover {
@@ -654,5 +684,6 @@ svg {
   position: absolute;
   transform: translateX(-200%);
   display: none;
+  flex-direction: column;
   transition: 0.5s ease-in-out;
 }

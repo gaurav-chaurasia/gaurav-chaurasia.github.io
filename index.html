@@ -437,30 +437,45 @@
 
         <div class="contact-me" id="contact">
             <div class="container">
-                <h3>contact me</h3>
-                <div class="submit-message alert alert-dark alert-dismissible" role="alert">
-                    <h4 class="alert-heading">Thank you for your Response!!!</h4>
-                    <p>Aww yeah, you have successfully submitted the form. I'II contact you soon.</p>
-                    <button class="close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
+                <h3 class="center">
+                    <span>
+                        contact me
+                    </span>
+                </h3>
+                <div class="row">
+                    <div class="col-md-6 contact" data-aos="fade-right">
+                        <div class="submit-message alert alert-dark alert-dismissible" role="alert">
+                            <h4 class="alert-heading row">
+                                Thank you for your Response!!!
+                            </h4>
+                            <p>
+                                Aww yeah, you have successfully submitted the form. I'II contact you soon.
+                            </p>
+                            <button class="close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <form id="google-form" action="https://docs.google.com/forms/d/e/1FAIpQLSdq0GRbSxu_RI0ER_2O7Imyh6jG521jAmW_KI_wx3YrPDOvjA/formResponse?" target="hidden_iframe" onsubmit="submitted=true;">
+                            
+                            <label for="entry.2005620554">Name</label>
+                            <input type="text" name="entry.2005620554" id="entry.2005620554"> <br>
+                            
+                            <label for="entry.1045781291">Email</label>
+                            <input type="email" name="entry.1045781291" id="entry.1045781291"> <br>
+                            
+                            <label for="entry.839337160">Query</label>
+                            <!-- <input type="text" name="entry.839337160" id="entry.839337160" placeholder="query"> <br> -->
+                            <textarea name="entry.839337160" id="entry.839337160" rows="5"></textarea>
+                            <button class="button" type="submit" >submit</button>
+                        </form>
+
+                        <iframe name="hidden_iframe" id="hidden_iframe" style="display: none;" onload="if(submitted) {}"></iframe>
+
+                    </div>
+                    <div class="col-md-6 contact-img" data-aos="fade-left">
+                        <img src="./assets/vendors img/absurd-design.png" alt="https://absurd.design/">
+                    </div>
                 </div>
-                <form id="google-form" action="https://docs.google.com/forms/d/e/1FAIpQLSdq0GRbSxu_RI0ER_2O7Imyh6jG521jAmW_KI_wx3YrPDOvjA/formResponse?" target="hidden_iframe" onsubmit="submitted=true;">
-                    
-                    <label for="entry.2005620554"></label>
-                    <input type="text" name="entry.2005620554" id="entry.2005620554" placeholder="name"> <br>
-                    
-                    <label for="entry.1045781291"></label>
-                    <input type="email" name="entry.1045781291" id="entry.1045781291" placeholder="email"> <br>
-                    
-                    <label for="entry.839337160"></label>
-                    <input type="text" name="entry.839337160" id="entry.839337160" placeholder="query"> <br>
-                    
-                    <button class="button" type="submit" >Submit</button>
-                </form>
-
-            <iframe name="hidden_iframe" id="hidden_iframe" style="display: none;" onload="if(submitted) {}"></iframe>
-
             </div>
         </div>
 

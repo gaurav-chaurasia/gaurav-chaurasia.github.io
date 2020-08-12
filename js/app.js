@@ -73,7 +73,7 @@ $("footer").on({
 		cursor.removeClass("cursor-invert");
 	},
 });
-$(".footer-links-link a").on({
+$(".footer-links-link a, .footer-links-icon a").on({
 	// making cursor enlarge on hovering links
 	mouseenter: function () {
 		cursor.addClass("animate-cursor");
@@ -105,7 +105,7 @@ $(".footer-links-link a").on({
 // console.log($("button"));
 // console.log($(".cursor"));
 
-$(".brand, .contact-me h3").on({
+$(".brand, .contact-me h3 span").on({
   // showing owns img on hover over name
   mouseenter: function () {
     cursor.toggleClass("on-logo");
