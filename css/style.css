@@ -251,7 +251,11 @@ nav {
   animation-delay: 2.5s;
   animation-duration: 1s;
 }
-
+.my-name {
+  border-left: 2px solid teal;
+  padding-left: 10px;
+  color: teal;
+}
 .main-page-content {
   /* display: flex; */
   /* flex-direction: column; */
@@ -569,6 +573,7 @@ nav {
 .contact-img img {
   width: 90%;
   height: auto;
+  transform: translateX(-50px);
 }
 /* 
 .contact-me * {
