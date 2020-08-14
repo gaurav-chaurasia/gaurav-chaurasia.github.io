@@ -81,7 +81,7 @@ section {
   transform: translate(-50%, -50%) scale(1);
 }
 .animate-cursor {
-  transform: translate(-50%, -50%) scale(5);
+  transform: translate(-50%, -50%) scale(6);
 }
 
 .on-logo {
@@ -119,7 +119,7 @@ li a:hover {
   background-color: darkgoldenrod;
 }
 .on-cross {
-  transform: translate(-50%, -50%) scale(6);
+  transform: translate(-50%, -50%) scale(8);
   transform-origin: center;
   background: #fff;
   mix-blend-mode: difference;
@@ -252,9 +252,8 @@ nav {
   animation-duration: 1s;
 }
 .my-name {
-  border-left: 2px solid teal;
+  border-left: 2px solid #000000;
   padding-left: 10px;
-  color: teal;
 }
 .main-page-content {
   /* display: flex; */

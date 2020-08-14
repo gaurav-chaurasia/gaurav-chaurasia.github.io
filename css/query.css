@@ -49,6 +49,9 @@
     .contact-img {
         padding-top: 2rem;
     }
+    .contact-img img {
+        transform: translateX(-25px);
+    }
     form input {
         width: 100%;
     }
