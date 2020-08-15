@@ -224,12 +224,14 @@ $(window).on( {
 		if (isInViewport('.b')) {
 		// console.log('success.')
       $('footer').css('opacity', '0');
+      $('footer').css('pointer-events', 'none');
       $('header').css('box-shadow', '0 0 0px 0px rgba(0, 0, 0, 0.1)')
 		} else {
 			//  Remove class
 			// $('.main-page').removeClass('test');
 			// console.log('No success.')
       $('footer').css('opacity', '1');
+      $('footer').css('pointer-events', 'all');
       $('header').css('box-shadow', '0 0 20px 20px rgba(150, 150, 150, 0.1)')
 
 		}

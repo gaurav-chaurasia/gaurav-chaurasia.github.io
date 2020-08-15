@@ -7,6 +7,10 @@ font-family: 'Montserrat', sans-serif; */
 	center: align item center
 	hide: shift element towards right out of view
 */
+@font-face {
+  font-family: font_for_logo;
+  src: url(../assets/fonts/Aerotis.otf);
+}
 * {
   margin: 0;
   padding: 0;
@@ -166,9 +170,8 @@ header div {
   transform: translateY(-50%);
 }
 .brand {
-  font-family: "Amatic SC";
+  font-family: font_for_logo;
   font-size: 2rem;
-  font-weight: 300;
   width: 100%;
 }
 nav {

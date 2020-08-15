@@ -4,6 +4,9 @@
     .logo {
         left: 8%;
     }
+    .brand {
+        font-size: 1.5rem;
+    }
     .manu-link {
         visibility: hidden;
     }
