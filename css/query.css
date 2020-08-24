@@ -49,6 +49,9 @@
     .about-img {
         margin-top: 40px;
     }
+    .on-cross {
+        transform: translate(-50%, -50%) scale(0);
+    }
     .contact-img {
         padding-top: 2rem;
     }
