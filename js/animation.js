@@ -11,33 +11,33 @@ $(window).ready(function () {
   });
 
   if (windowWidth >= 1000) {
-      tl.add({
+    tl.add({
+      targets: ".blocks div",
+      width: "100%",
+      backgroundColor: "rgb(197, 197, 255)",
+      delay: anime.stagger(100), // increase delay by 100ms for each elements.
+    })
+      .add({
         targets: ".blocks div",
-        width: "100%",
-        backgroundColor: "rgb(197, 197, 255)",
-        delay: anime.stagger(100), // increase delay by 100ms for each elements.
+        width: "90%",
+        backgroundColor: "rgb(235, 235, 235)",
       })
-        .add({
-          targets: ".blocks div",
-          width: "90%",
-          backgroundColor: "rgb(235, 235, 235)",
-        })
-        .add(
-          {
-            targets: "body",
-            top: "20%",
-            opacity: 1,
-          },
-          "-=1600"
-        )
-        .add({
-          targets: ".blocks",
-          scale: "2",
-          // scaleX: '2',
-          translateX: "40%",
-          rotate: "45deg",
-          duration: 2000,
-        });
+      .add(
+        {
+          targets: "body",
+          top: "20%",
+          opacity: 1,
+        },
+        "-=1600"
+      )
+      .add({
+        targets: ".blocks",
+        scale: "2",
+        // scaleX: '2',
+        translateX: "40%",
+        rotate: "45deg",
+        duration: 2000,
+      });
   } else if (windowWidth >= 700 && windowWidth < 1000) {
     tl.add({
       targets: ".blocks div",

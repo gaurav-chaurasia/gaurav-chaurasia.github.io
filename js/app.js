@@ -44,10 +44,10 @@ $(document).mousemove(function (e) {
 $("html").on({
   // making cursor disappera on leaving screen
   mouseenter: function () {
-    cursor.toggleClass("cursor-move");
+    cursor.addClass("cursor-move");
   },
   mouseleave: function () {
-    cursor.toggleClass("cursor-move");
+    cursor.removeClass("cursor-move");
   },
 });
 
@@ -237,6 +237,20 @@ $(window).on( {
 		}
 	}
 });
+
+// $(window).on({
+//   //Code here
+//   scroll: function () {
+//     if (isInViewport('#projects')) {
+//       if (isInViewport('.img2')) {
+//         $('.project-logo').addClass('project-logo1');
+//       }
+//       else {
+//         $('.project-logo').removeClass('project-logo1');
+//       }
+//     } 
+//   }
+// });
 
 // $(window).scroll(function () {
 //   if ($('.b').isInViewport()) {
