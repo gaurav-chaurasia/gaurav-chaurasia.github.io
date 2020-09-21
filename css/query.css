@@ -46,8 +46,8 @@
         font-size: 15px;
         text-align: justify;
     }
-    .about-img {
-        margin-top: 40px;
+    .about-me {
+        padding-top: 100px;
     }
     .on-cross {
         transform: translate(-50%, -50%) scale(0);

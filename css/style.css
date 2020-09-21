@@ -42,7 +42,7 @@ html {
 body {
   position: relative;
   font-family: "Montserrat", sans-serif !important;
-  font-weight: 300;
+  font-size: 20px;
   min-height: 100%;
 }
 ::selection {
@@ -212,7 +212,7 @@ nav {
   width: 2rem;
   height: 0.1rem;
   background-color: #000;
-  transition: 0.2s ease-out;
+  transition: 0.5s cubic-bezier(0.1, 1.31, 0.61, 1.18);
 }
 .hamburger div:nth-child(1) {
   top: 0px;
@@ -225,7 +225,7 @@ nav {
 }
 .slide {
   transform: translateX(1rem) scale(0);
-  transition: 0.2s ease-out;
+  transition: 0.5s cubic-bezier(0.1, 1.31, 0.61, 1.18);
 }
 
 .cross-down {
@@ -283,6 +283,7 @@ nav {
   /* transform: translateY(-50%); */
   margin-left: 10%;
   margin-top: 1%;
+  margin-bottom: 50px;
   padding: 10px 5px;
   display: flex;
   align-items: center;
@@ -298,7 +299,7 @@ nav {
   transition: 0.2s ease-in-out;
 }
 .b {
-  height: 100vh;
+  min-height: 100vh;
   position: relative;
   overflow: hidden;
 }
@@ -406,14 +407,10 @@ nav {
     .loder-5 { transform: scale(2) rotate(50deg) translate(520%, -70%);}
 } */
 
-#projects {
-  padding-bottom: 50px;
-}
 .project-content {
   font-size: 0.8rem;
   margin-top: 2%;
   padding-left: 10px;
-  color: #20123a;
 }
 .project-img {
   overflow: hidden;
@@ -434,14 +431,14 @@ nav {
 .card {
   margin-bottom: 50px;
   border: none !important;
+  box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.08);
+  /* box-shadow: rgba(0, 0, 0, 0.15) 0px 4px 26.91px; */
   /* box-shadow: 0px 0px 5px 5px rgba(200, 200, 200, 0.1); */
+  cursor: pointer;
   border-radius: 0 !important;
 }
 .card:hover {
-  /* border: 1px solid #000000; */
-  box-shadow: 0 5px 15px 0 rgba(0,0,0,0.08);
-  transform: translateY(-5px) !important;
-  /* box-shadow: 5px 5px 10px 5px rgba(0, 0, 0, 0.1); */
+  transform: translateY(-10px) !important;
 }
 .tech {
   margin-top: 2%;
@@ -465,6 +462,7 @@ nav {
     #605c3c,
     #3c3b3f
   ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: linear-gradient(to top, #434343, #000000);
 }
 .img2 {
   background: #000000; /* fallback for old browsers */
@@ -492,6 +490,7 @@ nav {
     #734b6d,
     #42275a
   ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: linear-gradient(to top, #434343, #000000);
 }
 
 .img4 {
@@ -508,6 +507,7 @@ nav {
     #203a43,
     #2c5364
   ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: linear-gradient(to top, #434343, #000000);
 }
 .project-img img {
   opacity: 0.1;
@@ -519,8 +519,11 @@ nav {
   color: #000;
   transform: scale(1);
 }
-
+.about-content {
+  text-align: justify;
+}
 .about-me {
+  padding-top: 150px;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
