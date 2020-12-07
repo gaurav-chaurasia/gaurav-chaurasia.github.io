@@ -1,6 +1,5 @@
 ### Webpage 
 
-### dir structure
 ```bash
 
     |   .prettierignore
