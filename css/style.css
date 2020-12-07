@@ -489,68 +489,93 @@ nav {
   border-radius: 5px;
 }
 .img1 {
-  background: #3c3b3f; /* fallback for old browsers */
+  background: #3c3b3f;
   background: -webkit-linear-gradient(
     to left,
     #605c3c,
     #3c3b3f
-  ); /* Chrome 10-25, Safari 5.1-6 */
+  ); 
   background: linear-gradient(
     to left,
     #605c3c,
     #3c3b3f
-  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  ); 
 }
 .img2 {
-  background: #000000; /* fallback for old browsers */
+  background: #000000;
   background: -webkit-linear-gradient(
     to top,
     #434343,
     #000000
-  ); /* Chrome 10-25, Safari 5.1-6 */
+  ); 
   background: linear-gradient(
     to top,
     #434343,
     #000000
-  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  ); 
 }
 
 .img3 {
-  background: #42275a; /* fallback for old browsers */
+  background: #42275a;
   background: -webkit-linear-gradient(
     to left,
     #734b6d,
     #42275a
-  ); /* Chrome 10-25, Safari 5.1-6 */
+  ); 
   background: linear-gradient(
     to left,
     #734b6d,
     #42275a
-  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  ); 
 }
 
 .img4 {
-  background-image: #0f2027; /* fallback for old browsers */
+  background-image: #0f2027;
   background-image: -webkit-linear-gradient(
     to right,
     #0f2027,
     #203a43,
     #2c5364
-  ); /* Chrome 10-25, Safari 5.1-6 */
+  ); 
   background-image: linear-gradient(
     to right,
     #0f2027,
     #203a43,
     #2c5364
-  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  ); 
+}
+
+.img5 {
+  background: #0F2027; 
+  background: -webkit-linear-gradient(to right, #2C5364, #203A43, #0F2027); 
+  background: linear-gradient(to right, #2C5364, #203A43, #0F2027); 
+}
+
+.img6 {
+    background: #000000;
+  background: -webkit-linear-gradient(
+    to top,
+    #434343,
+    #000000
+  ); 
+  background: linear-gradient(
+    to top,
+    #434343,
+    #000000
+  ); 
+}
+
+.img6 img, 
+.img5 img {
+  opacity: 0.3 !important;
 }
 .project-img img {
-  opacity: 0.1;
+  opacity: 0.2;
   transform: scale(1.1);
   transition: 0.5s ease-in-out;
 }
 .project-img img:hover {
-  opacity: 1;
+  opacity: 1 !important;
   color: #000;
   transform: scale(1);
 }

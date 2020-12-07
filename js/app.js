@@ -176,38 +176,50 @@ $('.manu-link').click(showing_slider);
 // };
 
 
-$('.img1').on({
+// $('.img1').on({
+//     mouseenter: function () {
+//         $('.img1 .project-title').toggleClass('fade');
+//     },
+//     mouseleave: function () {
+//         $('.img1 .project-title').toggleClass('fade');
+//     },
+// });
+// $('.img2').on({
+//     mouseenter: function () {
+//         $('.img2 .project-title').toggleClass('fade');
+//     },
+//     mouseleave: function () {
+//         $('.img2 .project-title').toggleClass('fade');
+//     },
+// });
+// $('.img3').on({
+//     mouseenter: function () {
+//         $('.img3 .project-title').toggleClass('fade');
+//     },
+//     mouseleave: function () {
+//         $('.img3 .project-title').toggleClass('fade');
+//     },
+// });
+// $('.img4').on({
+//     mouseenter: function () {
+//         $('.img4 .project-title').toggleClass('fade');
+//     },
+//     mouseleave: function () {
+//         $('.img4 .project-title').toggleClass('fade');
+//     },
+// });
+
+// fading all images on hover
+for(let i = 1; i <= 7; i++) {
+  $(`.img${i}`).on({
     mouseenter: function () {
-        $('.img1 .project-title').toggleClass('fade');
+        $(`.img${i} .project-title`).toggleClass('fade');
     },
     mouseleave: function () {
-        $('.img1 .project-title').toggleClass('fade');
+        $(`.img${i} .project-title`).toggleClass('fade');
     },
-});
-$('.img2').on({
-    mouseenter: function () {
-        $('.img2 .project-title').toggleClass('fade');
-    },
-    mouseleave: function () {
-        $('.img2 .project-title').toggleClass('fade');
-    },
-});
-$('.img3').on({
-    mouseenter: function () {
-        $('.img3 .project-title').toggleClass('fade');
-    },
-    mouseleave: function () {
-        $('.img3 .project-title').toggleClass('fade');
-    },
-});
-$('.img4').on({
-    mouseenter: function () {
-        $('.img4 .project-title').toggleClass('fade');
-    },
-    mouseleave: function () {
-        $('.img4 .project-title').toggleClass('fade');
-    },
-});
+  });
+}
 
 
 function isInViewport(element) {
