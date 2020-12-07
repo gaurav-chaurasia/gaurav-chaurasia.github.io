@@ -11,6 +11,18 @@ font-family: 'Montserrat', sans-serif; */
   font-family: font_for_logo;
   src: url(../assets/fonts/Aerotis.otf);
 }
+@font-face {
+  font-family: averta_bold;
+  src: url(../assets/fonts/Averta\ CY\ W01\ Bold.ttf);
+}
+@font-face {
+  font-family: averta_regular;
+  src: url(../assets/fonts/AvertaCY-Regular.woff2);
+}
+@font-face {
+  font-family: averta_light;
+  src: url(../assets/fonts/AvertaCY-Light.woff2);
+}
 * {
   margin: 0;
   padding: 0;
@@ -406,11 +418,16 @@ nav {
     .loder-4 { transform: scale(2) rotate(50deg) translate(410%, -70%);}
     .loder-5 { transform: scale(2) rotate(50deg) translate(520%, -70%);}
 } */
+.project-details {
+  margin: 10px 20px;
+  font-size: 0.8rem;
+  font-family: averta_light;
+}
 
 .project-content {
   font-size: 0.8rem;
   margin-top: 2%;
-  padding-left: 10px;
+  margin-bottom: 10px;
 }
 .project-img {
   overflow: hidden;
@@ -440,13 +457,34 @@ nav {
 .card:hover {
   transform: translateY(-10px) !important;
 }
+.project-toggle-links {
+  padding: 20px 0;
+}
+.project-toggle-links a {
+  margin-right: 10px;
+  font-size: 0.8rem;
+  padding: 5px 10px;
+  background-color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+  border: 1px solid #000000;
+}
+.project-toggle-links a:focus {
+  outline: none;
+}
+.project-toggle-links a:hover {
+  background-color: #ffffff;
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+  transition: 0.2s ease-in-out;
+}
 .tech {
-  margin-top: 2%;
-  padding-left: 10px;
+  padding-bottom: 10px;
 }
 .tech span {
   opacity: 0.8;
   font-size: 0.5rem;
+  font-family: averta_bold;
+  font-weight: bold;
   padding: 5px 10px;
   border-radius: 5px;
 }
@@ -462,7 +500,6 @@ nav {
     #605c3c,
     #3c3b3f
   ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  background: linear-gradient(to top, #434343, #000000);
 }
 .img2 {
   background: #000000; /* fallback for old browsers */
@@ -490,7 +527,6 @@ nav {
     #734b6d,
     #42275a
   ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  background: linear-gradient(to top, #434343, #000000);
 }
 
 .img4 {
@@ -507,7 +543,6 @@ nav {
     #203a43,
     #2c5364
   ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  background: linear-gradient(to top, #434343, #000000);
 }
 .project-img img {
   opacity: 0.1;
@@ -519,13 +554,10 @@ nav {
   color: #000;
   transform: scale(1);
 }
-.about-content {
-  text-align: justify;
-}
 .about-me {
   padding-top: 150px;
 	display: flex;
-	flex-direction: column;
+  flex-direction: column;
 	justify-content: center;
 }
 
