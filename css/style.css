@@ -262,6 +262,7 @@ nav {
   justify-content: center;
   transition: 0.5s ease-in-out;
   animation: fadeinx;
+  pointer-events: none;
   animation-play-state: paused;
   animation-delay: 2.5s;
   animation-duration: 1s;
@@ -269,6 +270,7 @@ nav {
 .my-name {
   border-left: 2px solid #000000;
   padding-left: 10px;
+  pointer-events: all;
 }
 .main-page-content {
   /* display: flex; */
@@ -292,6 +294,7 @@ nav {
   background-color: transparent;
   border: 1px solid #979797;
   border-radius: 50px;
+  pointer-events: all;
   /* transform: translateY(-50%); */
   margin-left: 10%;
   margin-top: 1%;
@@ -706,7 +709,8 @@ footer {
 	height: 50vh;
 	position: fixed;
 	left: 0;
-	opacity: 0;
+  opacity: 0;
+  pointer-events: none;
 	bottom: 0;
 	z-index: 1;
 }
@@ -743,7 +747,12 @@ svg {
 	font-size: 0.8rem;
 }
 
-.twitter:hover, .instagram:hover, .facebook:hover, .github:hover, .linkedin:hover {
+.twitter:hover, 
+.instagram:hover, 
+.facebook:hover, 
+.github:hover, 
+.linkedin:hover,
+.youtube:hover {
 	fill: #55acee;
 }
 

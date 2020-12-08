@@ -23,6 +23,9 @@
         margin-left: 10%;
         margin-top: 0%;
     }
+    .side-social {
+        display: none !important;
+    }
 }
 @media (max-width: 650px) {
     .slider{
@@ -110,16 +113,48 @@
 
 .email {
     font-size: 0.7rem;   
-    width: 30%;
+    width: 100%;
     margin-top: 5%;
     margin-left: 10%;
 }
 .social {
-    width: 60%;
+    width: 100%;
     padding-right: 4rem;
     transform: translateY(-25%);
     margin-top: 5%;
 }
 .social svg {
     margin-right: 3%;
+}
+
+
+/* side-social starts */
+.side-social {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    top: 50%;
+    right: 4%;
+    z-index: 1000;
+    transform: translateY(-50%);
+    transition: 0.5s ease-in-out;
+}
+.side-social-hide {
+    top: 120%;
+}
+.side-social a {
+    margin: 10px auto;
+}
+.side-social a svg {
+    fill: rgb(136, 136, 136);
+}
+.side-social::after {
+    content: " ";
+    position: absolute;
+    bottom: -500px;
+    left: 50%;
+    display: block;
+    width: 2px;
+    height: 500px;
+    background-color: rgb(136, 136, 136);
 }
