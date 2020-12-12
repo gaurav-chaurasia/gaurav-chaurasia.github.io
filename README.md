@@ -1,5 +1,9 @@
-### Webpage 
+<p align="center">
+  <img src="https://github.com/gaurav-chaurasia/gaurav-chaurasia.github.io/blob/master/img/favicon.svg?raw=true" alt="Sublime's custom image"/>
+</p>
 
+
+> Webpage `directory structure` 
 ```bash
 
     |   .prettierignore
@@ -19,7 +23,7 @@
     |       
     +---fonts
     |       Aerotis.otf
-    |       Averta CY W01 Bold.ttf
+    |       AvertaCY-Bold.ttf
     |       AvertaCY-Light.woff2
     |       AvertaCY-Regular.woff2
     |       google-fonts.css
@@ -47,7 +51,8 @@
         |       aos.css
         |       bootstrap.min.css
         |       scrollbar.css
-        |       
+        |       swiper-bundle.min.css
+        |
         +---img
         |       absurd-design.png
         |       
@@ -58,5 +63,6 @@
                 jquery-3.5.1.slim.min.js
                 jquery.min.js
                 popper.min.js
+                swiper-bundle.min.js
                 
 ```
