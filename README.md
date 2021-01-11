@@ -9,6 +9,7 @@
     |   .prettierignore
     |   .prettierrc
     |   index.html
+    |   projects.html
     |   package.json
     |   README.md
     |   robots.txt
@@ -20,6 +21,7 @@
     |       query.css
     |       slider.css
     |       style.css
+    |       swiper.css
     |       
     +---fonts
     |       Aerotis.otf
@@ -36,6 +38,9 @@
     |       bidding.png
     |       civil fresher1.jpg
     |       favicon.svg
+    |       DLHD.png
+    |       elib.png
+    |       estimate-runoff.png
     |       gaurav.jpg
     |       PLP.png
     |       webpage.png
@@ -43,6 +48,7 @@
     +---js
     |       animation.js
     |       app.js
+    |       swiper.js
     |       
     \---vendors
         |   info.txt
