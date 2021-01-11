@@ -271,14 +271,3 @@ $(window).on({
 //     console.log('No success.')
 //   }
 // });
-
-// hides social icon when footer is in viewPort
-$(window).on({
-    scroll: function () {
-        if (isInViewport('.footer-cover')) {
-            $('.side-social').addClass('side-social-hide');
-        } else {
-            $('.side-social').removeClass('side-social-hide');
-        }
-    },
-});
