@@ -271,3 +271,38 @@ $(window).on({
 //     console.log('No success.')
 //   }
 // });
+
+// making text for 
+
+// $(window).on({
+//     resize: () => {
+//         // console.log("hi");
+//         let w =
+//             window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+//         let imgs = document.querySelectorAll('.project-img img');
+//         if (w <= 480) {
+//             imgs.forEach((item, index) => {
+//                 // console.log(item);
+//                 item.classList.remove('img-fluid');
+//             });
+//         } else {
+//             imgs.forEach((item, index) => {
+//                 item.classList.add('img-fluid');
+//             });
+//         }
+//     }
+// });
+
+let w = window.innerWidth || 
+        document.documentElement.clientWidth || 
+        document.body.clientWidth;
+let imgs = document.querySelectorAll('.project-img img');
+if (w <= 480) {
+    imgs.forEach((item, index) => {
+        item.classList.remove('img-fluid');
+    });
+} else {
+    imgs.forEach((item, index) => {
+        item.classList.add('img-fluid');
+    });
+}
