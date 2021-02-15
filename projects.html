@@ -74,31 +74,58 @@
         <style>
             .search-project {
                 width: 100%;
-                margin: 50px auto;
+                margin: 20px auto;
                 padding: 10px 50px;
-                border: none;
-                box-shadow: 0 0px 5px 0 rgba(0, 0, 0, 0.08);
+                transition: 0.3s;
+                border: 1px solid rgba(201, 201, 201, 0.5);
+                border-radius: 30px;
             }
             .search-project:hover, 
             .search-project:focus,
             .search-project:active {
+                border: 1px solid rgba(161, 156, 156, 0);
+                transition: 0.3s;
                 box-shadow: 0px 5px 15px 0 rgba(0, 0, 0, 0.08);
             }
+
+            .input-container {
+                position: sticky;
+                top: 0px;
+                z-index: 9999;
+                background-color: white;
+                box-shadow: 0px 5px 20px 0 rgba(37, 37, 37, 0.08);
+            }
         </style>
+        <script src="./js/filter.js"></script>
     </head>
     <body>
         <div class="cursor"></div>
+        <div class="input-container">
+            <div class="container" style="display: flex; flex-direction: row;">
+                <div class="tech" style="display: flex; flex-direction: row; align-items: center; margin-right:10px; transform: translateY(5%);">
+                    <input type="radio" name="search-by" value="name">
+                    <span class="alert-dark">Name</span>
+                </div>            
+                <div class="tech" style="display: flex; flex-direction: row; align-items: center; margin-right:10px; transform: translateY(5%);">
+                    <input type="radio" name="search-by" value="tag">
+                    <span class="alert-dark">Tags</span>
+                </div>
+                <input 
+                    type="text" 
+                    class="search-project" 
+                    onkeyup="filter(this, document.querySelectorAll('.project-div'))" 
+                    placeholder="search..."
+                >
+            </div>
+        </div>
         <section class="pojects" id="projects">
             <div class="container">
-                <div class="container">
-                    <input type="text" class="search-project" placeholder="search...">
-                </div>
                 <br />
                 <h2 class="project-logo"> projects</h2>
                 <br />
                 <div class="row">
-                    <div class="col-md-6">
-                        <div class="card" data-aos="fade-up">
+                    <div class="col-md-6 project-div">
+                        <div class="card">
                             <div class="project-img img6">
                                 <img
                                     src="./img/DLHD.png"
@@ -155,8 +182,8 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-6">
-                        <div class="card" data-aos="fade-up">
+                    <div class="col-md-6 project-div">
+                        <div class="card">
                             <div class="project-img img5">
                                 <img
                                     src="./img/elib.png"
@@ -208,8 +235,8 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-6">
-                        <div class="card" data-aos="fade-up">
+                    <div class="col-md-6 project-div">
+                        <div class="card">
                             <div class="project-img img1">
                                 <img
                                     src="./img/bidding.png"
@@ -267,8 +294,8 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-6">
-                        <div class="card" data-aos="fade-up">
+                    <div class="col-md-6 project-div">
+                        <div class="card">
                             <div class="project-img img5">
                                 <img
                                     src="./img/estimate-runoff.png"
@@ -326,8 +353,8 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-6">
-                        <div class="card" data-aos="fade-up">
+                    <div class="col-md-6 project-div">
+                        <div class="card">
                             <div class="project-img img2">
                                 <img
                                     src="./img/arcade.jpg"
@@ -381,8 +408,8 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-6">
-                        <div class="card" data-aos="fade-up">
+                    <div class="col-md-6 project-div">
+                        <div class="card">
                             <div class="project-img img3">
                                 <img src="./img/webpage.png" class="img-fluid" alt="home page to my portfolio" />
                                 <div class="project-title">
@@ -428,8 +455,8 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-6">
-                        <div class="card" data-aos="fade-up">
+                    <div class="col-md-6 project-div">
+                        <div class="card">
                             <div class="project-img img4">
                                 <img src="./img/PLP.png" class="img-fluid" alt="personal learning project" />
                                 <div class="project-title">
