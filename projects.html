@@ -103,17 +103,17 @@
         <div class="input-container">
             <div class="container" style="display: flex; flex-direction: row;">
                 <div class="tech" style="display: flex; flex-direction: row; align-items: center; margin-right:10px; transform: translateY(5%);">
-                    <input type="radio" name="search-by" value="name">
+                    <input class="mr-1" type="radio" name="search-by" value="name">
                     <span class="alert-dark">Name</span>
                 </div>            
                 <div class="tech" style="display: flex; flex-direction: row; align-items: center; margin-right:10px; transform: translateY(5%);">
-                    <input type="radio" name="search-by" value="tag">
+                    <input class="mr-1" type="radio" name="search-by" value="tag">
                     <span class="alert-dark">Tags</span>
                 </div>
                 <input 
                     type="text" 
                     class="search-project" 
-                    onkeyup="filter(this, document.querySelectorAll('.project-div'))" 
+                    onkeyup="custom_filter(this, document.querySelectorAll('.project-div'))" 
                     placeholder="search..."
                 >
             </div>
