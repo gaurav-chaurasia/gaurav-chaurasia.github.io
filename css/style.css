@@ -683,6 +683,7 @@ form input {
 	/* border: 0; */
 	width: 100%;
 	border: 1px solid #979797;
+  padding: 5px 10px;
 	/* margin: 5% 0; */
 	/* transform: translateX(-20%); */
 }
@@ -691,6 +692,7 @@ textarea {
   width: 100%;
   border-radius: 0;
 	border: 1px solid #979797;
+  padding: 5px 10px;
 }
 
 form input:focus {
