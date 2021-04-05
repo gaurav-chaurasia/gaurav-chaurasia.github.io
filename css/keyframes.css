@@ -8,7 +8,17 @@
         transform: translateX(0%);
     }
 }
-
+@keyframes updown {
+    0% {
+        transform: translateY(0px);
+    }
+    100% {
+        transform: translateY(-25px);
+    }
+    /* 100% {
+        transform: translateX(0px);
+    } */
+}
 @keyframes fadeouty {
     0% {
         
