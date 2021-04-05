@@ -122,27 +122,33 @@
     <body>
         <div class="cursor"></div>
         <div class="input-container">
-            <div class="container" style="display: flex; flex-direction: row;">
-                <div class="tech" style="display: flex; flex-direction: row; align-items: center; margin-right:10px; transform: translateY(5%);">
-                    <input class="mr-1" type="radio" name="search-by" value="name" checked>
-                    <span class="alert-dark">Name</span>
-                </div>            
-                <div class="tech" style="display: flex; flex-direction: row; align-items: center; margin-right:10px; transform: translateY(5%);">
-                    <input class="mr-1" type="radio" name="search-by" value="tag">
-                    <span class="alert-dark">Tags</span>
-                </div>
-                <div class="search-project">
-                    <input 
-                        type="text" 
-                        class="search-input"
-                        onkeyup="custom_filter(this, document.querySelectorAll('.project-div'))" 
-                        placeholder="search..."
-                    >
-                    <button type="submit" class="search-icon-button" title="Submit">
-                        <svg id="mi-search" viewBox="0 0 24 22" class="search-icon">
-                            <path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"></path>
-                        </svg>
-                    </button>
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-2 mt-3" style="display: flex; flex-direction: row; justify-content: center;">
+                        <div class="tech" style="display: flex; flex-direction: row; align-items: center; margin-right:10px;">
+                            <input class="mr-1" type="radio" name="search-by" value="name" checked>
+                            <span class="alert-dark">Name</span>
+                        </div>            
+                        <div class="tech" style="display: flex; flex-direction: row; align-items: center; margin-right:10px;">
+                            <input class="mr-1" type="radio" name="search-by" value="tag">
+                            <span class="alert-dark">Tags</span>
+                        </div>
+                    </div>
+                    <div class="col-sm-10" style="display: flex; flex-direction: row; justify-content: center;">
+                        <div class="search-project">
+                            <input 
+                                type="text" 
+                                class="search-input"
+                                onkeyup="custom_filter(this, document.querySelectorAll('.project-div'))" 
+                                placeholder="search..."
+                            >
+                        </div>
+                        <button type="submit" class="search-icon-button" title="Submit">
+                            <svg id="mi-search" viewBox="0 0 24 22" class="search-icon">
+                                <path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"></path>
+                            </svg>
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>
