@@ -75,9 +75,10 @@
             .search-project {
                 width: 100%;
                 margin: 20px auto;
-                padding: 10px 50px;
+                padding-right: 0;
                 transition: 0.3s;
-                border: 1px solid rgba(201, 201, 201, 0.5);
+                border: 1px solid rgba(201, 201, 201, 0);
+                box-shadow: 0 1px 5px #dadce0;
                 border-radius: 30px;
             }
             .search-project:hover, 
@@ -95,6 +96,26 @@
                 background-color: white;
                 box-shadow: 0px 5px 20px 0 rgba(37, 37, 37, 0.08);
             }
+            .search-input {
+                width: 90%;
+                padding: 10px 50px;
+                transition: 0.3s;
+                border: 1px solid rgba(201, 201, 201, 0);
+                border-radius: 30px;
+            }
+            .search-icon-button {
+                background-color: transparent;
+                border: none;
+                padding: 0px 10px;
+                border-radius: 30px;
+            }
+            .search-icon-button:hover {
+                background-color: #d6d8d9;
+            }
+            .search-icon-button:active,
+            .search-icon-button:focus {
+                outline: none;
+            }
         </style>
         <script src="./js/filter.js"></script>
     </head>
@@ -103,19 +124,26 @@
         <div class="input-container">
             <div class="container" style="display: flex; flex-direction: row;">
                 <div class="tech" style="display: flex; flex-direction: row; align-items: center; margin-right:10px; transform: translateY(5%);">
-                    <input class="mr-1" type="radio" name="search-by" value="name">
+                    <input class="mr-1" type="radio" name="search-by" value="name" checked>
                     <span class="alert-dark">Name</span>
                 </div>            
                 <div class="tech" style="display: flex; flex-direction: row; align-items: center; margin-right:10px; transform: translateY(5%);">
                     <input class="mr-1" type="radio" name="search-by" value="tag">
                     <span class="alert-dark">Tags</span>
                 </div>
-                <input 
-                    type="text" 
-                    class="search-project" 
-                    onkeyup="custom_filter(this, document.querySelectorAll('.project-div'))" 
-                    placeholder="search..."
-                >
+                <div class="search-project">
+                    <input 
+                        type="text" 
+                        class="search-input"
+                        onkeyup="custom_filter(this, document.querySelectorAll('.project-div'))" 
+                        placeholder="search..."
+                    >
+                    <button type="submit" class="search-icon-button" title="Submit">
+                        <svg id="mi-search" viewBox="0 0 24 22" class="search-icon">
+                            <path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"></path>
+                        </svg>
+                    </button>
+                </div>
             </div>
         </div>
         <section class="pojects" id="projects">
