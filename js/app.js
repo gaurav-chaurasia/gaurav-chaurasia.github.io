@@ -306,3 +306,19 @@ if (w <= 480) {
         item.classList.add('img-fluid');
     });
 }
+
+// make image zoom functionality
+
+function add_magnification(item) {
+    const img_src = item.querySelectorAll('img')[0].src;
+    const img_cont = document.querySelector('.magnification_container');
+    const img = document.querySelector('.maginify_img');
+
+    img.src = img_src;
+    img_cont.style.display = 'flex';
+    // console.log(img_cont.style.display);
+}
+
+function remove_magnification(item) {
+    item.style.display = 'none';
+}

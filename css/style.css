@@ -310,6 +310,7 @@ nav {
 .see-more:hover {
   background-color: #000000;
   text-decoration: none;
+  border: 1px solid #000;
   color: #fff;
   transition: 0.2s ease-in-out;
 }
@@ -455,9 +456,30 @@ nav {
 .project-img {
   overflow: hidden;
   color: #fff;
+  cursor: zoom-in;
   height: auto;
   background-position: center;
   background-size: cover;
+}
+
+.magnification_container {
+  transition: 2s;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.356);
+  z-index: 9999;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: none;
+  cursor: zoom-out;
+}
+.maginify_img {
+  width: 80%;
+  height: auto;
 }
 .project-title {
   position: absolute;
