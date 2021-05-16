@@ -1,5 +1,8 @@
 <p align="center">
   <img src="https://github.com/gaurav-chaurasia/gaurav-chaurasia.github.io/blob/master/img/favicon.svg?raw=true" alt="Sublime's custom image"/>
+
+  [![Generic badge](https://img.shields.io/badge/language-html-green.svg) ![Generic badge](https://img.shields.io/badge/language-css-blue.svg) ![Generic badge](https://img.shields.io/badge/language-js-yellow.svg)](https://github.com/gaurav-chaurasia/)  [![Ask Me Anything !](https://img.shields.io/badge/Ask%20me-anything-1abc9c.svg)](https://gaurav-chaurasia.github.io/)   
+
 </p>
 
 
