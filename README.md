@@ -1,77 +1,22 @@
 <p align="center">
-  <img src="https://github.com/gaurav-chaurasia/gaurav-chaurasia.github.io/blob/master/img/favicon.svg?raw=true" alt="Sublime's custom image"/>
 
-  [![Generic badge](https://img.shields.io/badge/language-html-green.svg) ![Generic badge](https://img.shields.io/badge/language-css-blue.svg) ![Generic badge](https://img.shields.io/badge/language-js-yellow.svg)](https://github.com/gaurav-chaurasia/)  [![Ask Me Anything !](https://img.shields.io/badge/Ask%20me-anything-1abc9c.svg)](https://gaurav-chaurasia.github.io/)   
+  <a href="https://gaurav-chaurasia.github.io/">
+    <img src="https://github.com/gaurav-chaurasia/gaurav-chaurasia.github.io/blob/master/img/favicon.svg?raw=true" alt="Sublime's custom image"/>
+  </a>
+  
+  <br/>
+  
+  <a href="https://github.com/gaurav-chaurasia/">
+    <img src="https://img.shields.io/badge/language-html-green.svg"/>
+  </a>
+  <a href="https://github.com/gaurav-chaurasia/">
+    <img src="https://img.shields.io/badge/language-css-blue.svg"/>
+  </a>
+  <a href="https://github.com/gaurav-chaurasia/">
+    <img src="https://img.shields.io/badge/language-js-yellow.svg"/>
+  </a>
+  <a href="https://gaurav-chaurasia.github.io/">
+    <img src="https://img.shields.io/badge/Ask%20me-anything-1abc9c.svg"/>
+  </a>   
 
 </p>
-
-
-> Webpage `directory structure` 
-```bash
-
-    |   .prettierignore
-    |   .prettierrc
-    |   index.html
-    |   projects.html
-    |   package.json
-    |   README.md
-    |   robots.txt
-    |   tree.txt
-    |   
-    +---assets
-    +---css
-    |       keyframes.css
-    |       query.css
-    |       slider.css
-    |       style.css
-    |       swiper.css
-    |       
-    +---fonts
-    |       Aerotis.otf
-    |       AvertaCY-Bold.ttf
-    |       AvertaCY-Light.woff2
-    |       AvertaCY-Regular.woff2
-    |       google-fonts.css
-    |       
-    +---icons
-    |       add-outline.svg
-    |       
-    +---img
-    |       arcade.jpg
-    |       bidding.png
-    |       civil fresher1.jpg
-    |       favicon.svg
-    |       DLHD.png
-    |       elib.png
-    |       estimate-runoff.png
-    |       gaurav.jpg
-    |       PLP.png
-    |       webpage.png
-    |       
-    +---js
-    |       animation.js
-    |       app.js
-    |       swiper.js
-    |       
-    \---vendors
-        |   info.txt
-        |   
-        +---css
-        |       aos.css
-        |       bootstrap.min.css
-        |       scrollbar.css
-        |       swiper-bundle.min.css
-        |
-        +---img
-        |       absurd-design.png
-        |       
-        \---js
-                anime.min.js
-                aos.js
-                bootstrap.min.js
-                jquery-3.5.1.slim.min.js
-                jquery.min.js
-                popper.min.js
-                swiper-bundle.min.js
-                
-```
