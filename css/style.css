@@ -807,3 +807,39 @@ svg {
   flex-direction: column;
   transition: 0.5s ease-in-out;
 }
+
+.dropbtn {
+  background-color: #ffffff00;
+  border: none;
+  font-size: 2rem;
+  margin-bottom: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+.dropdown-content {
+  position: fixed;
+  place-items: center;
+  background-color: rgba(255, 255, 255, 1);
+  transform: translate(-25%,-100%) scale(0);
+  transform-origin: bottom; 
+  padding: 10px 40px;
+  box-shadow: 1px 2px 30px 0px rgba(0, 0, 0, 0.08);
+  transition: 0.5s cubic-bezier(0.1, 1.31, 0.61, 1.18);
+  z-index: 1;
+}
+.dropdown-content a {
+  color: rgb(0, 0, 0) !important;
+  text-decoration: none;
+  display: block;
+  padding: 5px 40px;
+  margin: 10px auto !important;
+  font-size: 1rem !important;
+}
+.dropdown:hover .dropdown-content {
+  transform: translate(-25%,-100%) scale(1);
+}
