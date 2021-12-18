@@ -9,19 +9,19 @@ font-family: 'Montserrat', sans-serif; */
 */
 @font-face {
   font-family: font_for_logo;
-  src: url(../fonts/Aerotis.otf);
+  src: url(../../fonts/Aerotis.otf);
 }
 @font-face {
   font-family: averta_bold;
-  src: url(../fonts/AvertaCY-Bold.ttf);
+  src: url(../../fonts/AvertaCY-Bold.ttf);
 }
 @font-face {
   font-family: averta_regular;
-  src: url(../fonts/AvertaCY-Regular.woff2);
+  src: url(../../fonts/AvertaCY-Regular.woff2);
 }
 @font-face {
   font-family: averta_light;
-  src: url(../fonts/AvertaCY-Light.woff2);
+  src: url(../../fonts/AvertaCY-Light.woff2);
 }
 * {
   margin: 0;
@@ -102,14 +102,14 @@ section {
 
 .on-logo {
   transform: translate(250%, 250%) scale(20);
-  background-image: url(../img/gaurav.jpg);
+  background-image: url(../../img/gaurav.jpg);
   background-size: cover;
   background-position: center;
   opacity: 1;
 }
 .on-name {
   transform: translate(250%, 250%) scale(20);
-  background-image: url(../img/civil\ fresher1.jpg);
+  background-image: url(../../img/civil_fresher.jpg);
   background-size: cover;
   background-position: center;
   opacity: 1;
@@ -143,7 +143,7 @@ li a:hover {
 
 .about-img {
   margin: 0 auto;
-  background-image: url(../img/civil\ fresher1.jpg);
+  background-image: url(../../img/civil_fresher.jpg);
   width: 5rem;
   height: 5rem;
   border-radius: 50%;

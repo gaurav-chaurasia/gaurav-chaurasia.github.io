@@ -1,0 +1,79 @@
+/* main section */
+// media query for small devise 
+@media (max-width: 480px) {
+    .logo {
+        left: 8%;
+    }
+    .brand {
+        font-size: 1.5rem;
+    }
+    .manu-link {
+        visibility: hidden;
+    }
+    .hamburger {
+        right: 8%;
+    }
+    .main-page-content {
+        font-size: 1.1rem;
+        margin-top: 20% !important;
+    }
+    .see-more {
+        margin-top: 5%;
+    }
+    .blocks {
+        grid-template-columns: repeat(5, auto);
+    }
+    #projects {
+        background-color: rgb(251, 251, 251);
+    }
+    .card {
+        box-shadow: 0 5px 15px 0 rgba(0,0,0,0.08);
+    }
+    .card:hover {
+        box-shadow: 0 5px 15px 0 rgba(0,0,0,0.08);
+        transform: translateY(0px) !important;
+    }
+    .project-content {
+        font-size: 0.6rem;
+    }
+    .project-title {
+        left: 5%;
+    }
+    .link-to-projects svg {
+        transform: scale(0.7);
+    }
+    .about-content {
+        font-size: 15px;
+    }
+    .about-me {
+        padding-top: 100px;
+    }
+    .on-cross {
+        transform: translate(-50%, -50%) scale(0);
+    }
+    .contact-img {
+        padding-top: 2rem;
+    }
+    .contact-img img {
+        transform: translateX(-25px);
+    }
+    form input {
+        width: 100%;
+    }
+    .footer-links {
+        margin-top: 2rem;
+        font-size: 0.8rem;
+    }
+    .footer-links-link {
+        margin-bottom: 20px;
+    }
+    .footer-links-link a {
+        margin-right: 2%;
+    }
+    .footer-links-icon svg {
+        margin-right: 5%;
+    }
+    .tag {
+        font-size: 0.7rem;
+    }
+}

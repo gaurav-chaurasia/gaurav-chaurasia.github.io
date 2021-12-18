@@ -1,0 +1,26 @@
+@keyframes fadeinx {
+    0% {
+        opacity: 0;
+        transform: translateX(20%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0%);
+    }
+}
+@keyframes updown {
+    0% {
+        transform: translateY(0px);
+    }
+    100% {
+        transform: translateY(-25px);
+    }
+    /* 100% {
+        transform: translateX(0px);
+    } */
+}
+// @keyframes fadeouty {
+//     0% {
+        
+//     }
+// }
