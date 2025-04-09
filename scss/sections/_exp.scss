@@ -1,0 +1,47 @@
+.experiences {
+  min-height: 100vh;
+  margin-top: 100px;
+}
+.custom-timeline {
+  position: relative;
+  padding-left: 30px;
+  margin-left: 10px;
+  border-left: 3px solid #000000;
+}
+
+.custom-timeline-item {
+  position: relative;
+  padding-left: 20px;
+  margin-bottom: 40px;
+}
+
+.custom-timeline-item::after {
+  content: '';
+  position: absolute;
+  left: -22px;
+  top: 6px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: #000000;
+  border: 3px solid #000;
+  z-index: 1;
+}
+
+.custom-timeline-date {
+  font-size: 0.9rem;
+  color: #6c757d;
+  margin-bottom: 0.5rem;
+}
+
+.custom-timeline-list {
+  padding-left: 1.2rem;
+}
+
+.custom-timeline-list li {
+  margin-bottom: 0.5rem;
+}
+
+.custom-timeline h5 {
+  color: #000000;
+}
