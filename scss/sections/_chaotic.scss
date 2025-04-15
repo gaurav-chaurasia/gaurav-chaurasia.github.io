@@ -108,11 +108,69 @@ section {
   opacity: 1;
 }
 .on-name {
-  transform: translate(250%, 250%) scale(20);
-  background-image: url(../../img/civil_fresher.jpg);
+  transform: translate(-50%, -50%) scale(1);
+  // background-image: url(../../img/civil_fresher.jpg);
   background-size: cover;
   background-position: center;
+  border-radius: 0;
+  border: 1px solid black;
   opacity: 1;
+  width: 300px;
+  height: 100px;
+  background-color: #ffffff45;
+  opacity: 0.9;
+  box-shadow: 0 0 rgba(0, 0, 0, 0.5) rgba(0, 0, 0, 0.5);
+  background-color: rgba(255, 255, 255, 0.95) rgba(1, 1, 1, 0.5);
+  backdrop-filter: saturate(180%) blur(10px);
+}
+
+.project-card:hover {
+  border: 1px solid black !important;
+}
+//
+.care-img {
+  transform: translate(-50%, -50%) scale(0.50);
+  background-image: url(../../img/MSG.png);
+  background-size: cover;
+  background-position: center;
+  border-radius: 0;
+  opacity: 1;
+  aspect-ratio: 16 / 9;
+  width: 100%;
+  height: inherit;
+}
+.doc-ops-img {
+  transform: translate(-50%, -50%) scale(0.50);
+  background-image: url(../../img/doc-ops.png);
+  background-size: cover;
+  background-position: center;
+  border-radius: 0;
+  opacity: 1;
+  aspect-ratio: 16 / 9;
+  width: 100%;
+  height: inherit;
+}
+.online-aution-img {
+  transform: translate(-50%, -50%) scale(0.50);
+  background-image: url(../../img/bidding.png);
+  background-size: cover;
+  background-position: center;
+  border-radius: 0;
+  opacity: 1;
+  aspect-ratio: 16 / 9;
+  width: 100%;
+  height: inherit;
+}
+.elib-img {
+  transform: translate(-50%, -50%) scale(0.50);
+  background-image: url(../../img/elib.png);
+  background-size: cover;
+  background-position: center;
+  border-radius: 0;
+  opacity: 1;
+  aspect-ratio: 16 / 9;
+  width: 100%;
+  height: inherit;
 }
 
 img {
