@@ -6,7 +6,7 @@
   position: relative;
   padding-left: 30px;
   margin-left: 10px;
-  border-left: 3px solid #000000;
+  border-left: 1px solid #000000;
 }
 
 .custom-timeline-item {
@@ -18,16 +18,30 @@
 .custom-timeline-item::after {
   content: '';
   position: absolute;
-  left: -22px;
-  top: 6px;
-  width: 16px;
-  height: 16px;
+  left: -42px;
+  top: 2px;
+  width: 24px;
+  height: 24px;
   border-radius: 50%;
-  background-color: #000000;
-  border: 3px solid #000;
+  // background-color: rgb(197, 197, 255);
+  background-color:rgb(235, 235,235);
+  background-color: rgb(255, 255, 255);
+  // border: 3px solid #000;
   z-index: 1;
 }
 
+.custom-timeline-item::before {
+  content: '';
+  position: absolute;
+  left: -34px;
+  top: 10px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #000000;
+  // border: 3px solid #7e3131;
+  z-index: 2;
+}
 .custom-timeline-date {
   font-size: 0.9rem;
   color: #6c757d;
