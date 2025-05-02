@@ -18,13 +18,13 @@
 .custom-timeline-item::after {
   content: '';
   position: absolute;
-  left: -42px;
-  top: 2px;
-  width: 24px;
-  height: 24px;
+  left: -48px;
+  top: -3px;
+  width: 34px;
+  height: 34px;
   border-radius: 50%;
   // background-color: rgb(197, 197, 255);
-  background-color:rgb(235, 235,235);
+  background-color:rgb(255, 171, 171);
   background-color: rgb(255, 255, 255);
   // border: 3px solid #000;
   z-index: 1;
@@ -33,7 +33,7 @@
 .custom-timeline-item::before {
   content: '';
   position: absolute;
-  left: -34px;
+  left: -35px;
   top: 10px;
   width: 8px;
   height: 8px;
