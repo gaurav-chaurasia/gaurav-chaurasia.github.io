@@ -20,3 +20,9 @@
   </a>   
 
 </p>
+
+<br/>
+
+> 
+> cd path/gaurav-chaurasia.github.io && python3 -m http.server 33333
+> 
