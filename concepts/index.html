@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>SE Concepts & System Design</title>
+  <link rel="stylesheet" href="css/concepts.css"/>
+  <link rel="shortcut icon" href="../img/favicon.svg" type="image/x-icon"/>
+</head>
+<body>
+  <nav class="nav">
+    <a href="../index.html">&#8592; Back to Portfolio</a>
+    <a href="../algorithms/index.html">Algorithm Visualizer</a>
+  </nav>
+
+  <div class="header" style="padding-top:3rem;">
+    <h1>Software Engineering Concepts</h1>
+    <p>Visual notes on distributed systems, scalability, reliability, data architecture, and everything a senior engineer needs to know.</p>
+  </div>
+
+  <div class="search-wrap">
+    <input type="text" id="search" placeholder="Search concepts..." autocomplete="off"/>
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+  </div>
+  <div id="noResults" class="no-results">No concepts found matching your search.</div>
+
+  <div class="grid" id="grid">
+    <a href="distributed-systems.html" class="card" data-tags="distributed consistency replication quorum consensus cap theorem clocks ordering failures partitions">
+      <h3>1. Distributed Systems Fundamentals</h3>
+      <p>Consistency models, replication strategies, quorum systems, consensus protocols, ordering & clocks, failure models.</p>
+      <span class="tag">CAP &bull; Paxos &bull; Raft &bull; Vector Clocks</span>
+    </a>
+    <a href="scalability.html" class="card" data-tags="scalability performance horizontal vertical scaling sharding partitioning caching latency backpressure hotspot stateless">
+      <h3>2. Scalability & Performance</h3>
+      <p>Horizontal vs vertical scaling, sharding strategies, caching architectures, latency, backpressure & flow control.</p>
+      <span class="tag">Sharding &bull; Caching &bull; CDN &bull; Tail Latency</span>
+    </a>
+    <a href="reliability.html" class="card" data-tags="reliability resilience fault tolerance retries timeouts circuit breaker degradation load shedding disaster recovery chaos">
+      <h3>3. Reliability & Resilience</h3>
+      <p>Fault tolerance, retries & circuit breakers, graceful degradation, load shedding, disaster recovery, chaos testing.</p>
+      <span class="tag">Circuit Breaker &bull; Bulkhead &bull; DR &bull; Chaos</span>
+    </a>
+    <a href="data-architecture.html" class="card" data-tags="data modeling oltp olap event driven streaming idempotency deduplication schema evolution cqrs event sourcing">
+      <h3>4. Data Architecture</h3>
+      <p>Data modeling, OLTP vs OLAP, event-driven & streaming systems, idempotency, schema evolution, data correctness.</p>
+      <span class="tag">CQRS &bull; Event Sourcing &bull; CDC &bull; Kafka</span>
+    </a>
+    <a href="api-design.html" class="card" data-tags="api service design rest grpc graphql versioning contracts domain driven ddd backward compatibility synchronous asynchronous">
+      <h3>5. API & Service Design</h3>
+      <p>API contracts & versioning, service boundaries, domain-driven design, sync vs async APIs, backward compatibility.</p>
+      <span class="tag">REST &bull; gRPC &bull; DDD &bull; Contracts</span>
+    </a>
+    <a href="observability.html" class="card" data-tags="observability metrics logs traces sli slo error budget alerting debugging incident response monitoring">
+      <h3>6. Observability & Operability</h3>
+      <p>Metrics, logs & traces, SLIs/SLOs/error budgets, alerting strategies, production diagnostics, incident response.</p>
+      <span class="tag">SLO &bull; Tracing &bull; Alerting &bull; Incidents</span>
+    </a>
+    <a href="security.html" class="card" data-tags="security privacy threat modeling authentication authorization identity secrets encryption multi-tenant isolation compliance audit">
+      <h3>7. Security & Privacy by Design</h3>
+      <p>Threat modeling, authn/authz, identity propagation, secrets management, encryption, multi-tenant isolation, compliance.</p>
+      <span class="tag">OAuth &bull; mTLS &bull; Zero Trust &bull; RBAC</span>
+    </a>
+    <a href="multi-tenancy.html" class="card" data-tags="multi-tenancy platform tenant isolation noisy neighbor scaling throttling paved roads developer platform internal">
+      <h3>8. Multi-Tenancy & Platform Design</h3>
+      <p>Tenant isolation models, noisy-neighbor problems, per-tenant scaling, platform vs product, internal developer platforms.</p>
+      <span class="tag">Isolation &bull; Throttling &bull; IDP &bull; Golden Paths</span>
+    </a>
+    <a href="evolution.html" class="card" data-tags="evolution change management zero downtime deployment backward compatible migration feature flags rollout tech debt refactoring">
+      <h3>9. Evolution & Change Management</h3>
+      <p>Zero-downtime deployments, backward-compatible changes, data migrations, feature flags, tech-debt, system refactoring.</p>
+      <span class="tag">Blue-Green &bull; Canary &bull; Flags &bull; Migrations</span>
+    </a>
+    <a href="governance.html" class="card" data-tags="architecture governance rfc design docs tradeoff analysis decision records adr strategy irreversible reversible">
+      <h3>10. Architecture Governance</h3>
+      <p>Architecture review processes, RFCs & design docs, trade-off analysis, decision records, long-term technical strategy.</p>
+      <span class="tag">ADR &bull; RFC &bull; Trade-offs &bull; Strategy</span>
+    </a>
+    <a href="genai-ml.html" class="card" data-tags="genai ml ai model serving rag evaluation feedback latency cost guardrails safety data pipelines machine learning llm">
+      <h3>11. GenAI / ML Systems</h3>
+      <p>Model serving architectures, RAG systems, evaluation & feedback loops, latency vs cost, guardrails & safety, ML pipelines.</p>
+      <span class="tag">RAG &bull; LLM &bull; Serving &bull; Pipelines</span>
+    </a>
+  </div>
+
+  <div class="footer">
+    Built by Gaurav Chaurasia &bull; <a href="../index.html">Back to Portfolio</a>
+  </div>
+
+<script>
+document.getElementById('search').addEventListener('input', function(){
+  const q = this.value.toLowerCase().trim();
+  const cards = document.querySelectorAll('.card');
+  let visible = 0;
+  cards.forEach(card => {
+    const text = (card.textContent + ' ' + (card.dataset.tags || '')).toLowerCase();
+    const match = !q || text.includes(q);
+    card.classList.toggle('hidden', !match);
+    if(match) visible++;
+  });
+  document.getElementById('noResults').style.display = (q && visible === 0) ? 'block' : 'none';
+});
+</script>
+</body>
+</html>

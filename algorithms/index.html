@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Algorithm Visualizer</title>
+  <meta name="description" content="Interactive algorithm and data structure visualizations with animations" />
+  <link rel="stylesheet" href="../fonts/google-fonts.css" />
+  <link rel="stylesheet" href="css/algo-common.css" />
+  <link rel="shortcut icon" href="../img/favicon.svg" type="image/x-icon" />
+  <style>
+    .search-wrap{max-width:480px;margin:0 auto 2rem;position:relative;}
+    .search-wrap input{width:100%;padding:0.6rem 1rem 0.6rem 2.4rem;border:1px solid #e0e0e0;font-size:0.7rem;font-family:inherit;outline:none;transition:border-color 0.2s;}
+    .search-wrap input:focus{border-color:#000;}
+    .search-wrap svg{position:absolute;left:0.7rem;top:50%;transform:translateY(-50%);width:16px;height:16px;color:#bdbdbd;pointer-events:none;}
+    .search-wrap input:focus ~ svg{color:#000;}
+    .category-section.hidden{display:none;}
+    .algo-card.hidden{display:none;}
+    .no-results{text-align:center;color:#616161;font-size:0.7rem;padding:3rem 1rem;display:none;}
+  </style>
+</head>
+<body>
+  <nav class="algo-nav">
+    <a href="../index.html" class="nav-title">&#8592; Back to Portfolio</a>
+    <a href="/concepts" style="font-size:0.7rem;color:#000;text-decoration:none;font-weight:500;margin-left:auto;">Software Engineer Concepts &#8594;</a>
+  </nav>
+
+  <div class="algo-header" style="padding-top:3rem;">
+    <h1>Algorithm & Data Structure Visualizer</h1>
+    <p>Interactive animations to help you understand how algorithms and data structures work under the hood.</p>
+  </div>
+
+  <div class="search-wrap">
+    <input type="text" id="search" placeholder="Search algorithms..." autocomplete="off" />
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+  </div>
+  <div id="noResults" class="no-results">No algorithms found matching your search.</div>
+
+  <!-- Sorting -->
+  <div class="category-section" data-category="sorting">
+  <h2 class="category-heading" id="sorting">Sorting Algorithms</h2>
+  <div class="algo-grid">
+    <a href="sorting/bubble-sort.html" class="algo-card" data-tags="sorting bubble swap comparison">
+      <h3>Bubble Sort</h3>
+      <p>Repeatedly swaps adjacent elements if they are in the wrong order.</p>
+      <span class="card-tag">O(n&sup2;)</span>
+    </a>
+    <a href="sorting/selection-sort.html" class="algo-card" data-tags="sorting selection minimum comparison">
+      <h3>Selection Sort</h3>
+      <p>Finds the minimum element and places it at the beginning each pass.</p>
+      <span class="card-tag">O(n&sup2;)</span>
+    </a>
+    <a href="sorting/insertion-sort.html" class="algo-card" data-tags="sorting insertion comparison stable">
+      <h3>Insertion Sort</h3>
+      <p>Builds sorted array one element at a time by inserting into position.</p>
+      <span class="card-tag">O(n&sup2;)</span>
+    </a>
+    <a href="sorting/merge-sort.html" class="algo-card" data-tags="sorting merge divide conquer stable">
+      <h3>Merge Sort</h3>
+      <p>Divides array in half, sorts each half, then merges them back.</p>
+      <span class="card-tag">O(n log n)</span>
+    </a>
+    <a href="sorting/quick-sort.html" class="algo-card" data-tags="sorting quick pivot partition divide conquer">
+      <h3>Quick Sort</h3>
+      <p>Picks a pivot and partitions the array around it recursively.</p>
+      <span class="card-tag">O(n log n)</span>
+    </a>
+    <a href="sorting/heap-sort.html" class="algo-card" data-tags="sorting heap max extract">
+      <h3>Heap Sort</h3>
+      <p>Builds a max heap and repeatedly extracts the maximum element.</p>
+      <span class="card-tag">O(n log n)</span>
+    </a>
+    <a href="sorting/counting-sort.html" class="algo-card" data-tags="sorting counting non-comparison linear integer">
+      <h3>Counting Sort</h3>
+      <p>Non-comparison sort that counts occurrences of each value. Linear time for bounded integers.</p>
+      <span class="card-tag">O(n + k)</span>
+    </a>
+    <a href="sorting/radix-sort.html" class="algo-card" data-tags="sorting radix digit non-comparison linear">
+      <h3>Radix Sort</h3>
+      <p>Sorts integers digit by digit from least significant to most significant.</p>
+      <span class="card-tag">O(nk)</span>
+    </a>
+  </div>
+  </div>
+
+  <!-- Searching -->
+  <div class="category-section" data-category="searching">
+  <h2 class="category-heading" id="searching">Searching Algorithms</h2>
+  <div class="algo-grid">
+    <a href="searching/linear-search.html" class="algo-card" data-tags="searching linear sequential scan">
+      <h3>Linear Search</h3>
+      <p>Sequentially checks each element until the target is found.</p>
+      <span class="card-tag">O(n)</span>
+    </a>
+    <a href="searching/binary-search.html" class="algo-card" data-tags="searching binary sorted divide">
+      <h3>Binary Search</h3>
+      <p>Halves the search space each step on a sorted array.</p>
+      <span class="card-tag">O(log n)</span>
+    </a>
+  </div>
+  </div>
+
+  <!-- Data Structures -->
+  <div class="category-section" data-category="ds">
+  <h2 class="category-heading" id="ds">Data Structures</h2>
+  <div class="algo-grid">
+    <a href="data-structures/stack.html" class="algo-card" data-tags="data structure stack lifo push pop">
+      <h3>Stack</h3>
+      <p>Last-In-First-Out (LIFO) structure with push and pop operations.</p>
+      <span class="card-tag">LIFO</span>
+    </a>
+    <a href="data-structures/queue.html" class="algo-card" data-tags="data structure queue fifo enqueue dequeue">
+      <h3>Queue</h3>
+      <p>First-In-First-Out (FIFO) structure with enqueue and dequeue.</p>
+      <span class="card-tag">FIFO</span>
+    </a>
+    <a href="data-structures/linked-list.html" class="algo-card" data-tags="data structure linked list node pointer">
+      <h3>Linked List</h3>
+      <p>Linear collection of nodes connected by pointers.</p>
+      <span class="card-tag">Dynamic</span>
+    </a>
+    <a href="data-structures/bst.html" class="algo-card" data-tags="data structure binary search tree bst">
+      <h3>Binary Search Tree</h3>
+      <p>Tree where left child &lt; parent &lt; right child.</p>
+      <span class="card-tag">O(log n)</span>
+    </a>
+    <a href="data-structures/heap.html" class="algo-card" data-tags="data structure heap min max priority queue">
+      <h3>Min/Max Heap</h3>
+      <p>Complete binary tree with heap property — bubble up & down.</p>
+      <span class="card-tag">O(log n)</span>
+    </a>
+    <a href="data-structures/hash-table.html" class="algo-card" data-tags="data structure hash table map dictionary collision">
+      <h3>Hash Table</h3>
+      <p>Key-value store using hash functions with collision handling.</p>
+      <span class="card-tag">O(1) avg</span>
+    </a>
+    <a href="data-structures/trie.html" class="algo-card" data-tags="data structure trie prefix tree autocomplete string">
+      <h3>Trie (Prefix Tree)</h3>
+      <p>Tree structure for efficient prefix-based string search and autocomplete.</p>
+      <span class="card-tag">O(L)</span>
+    </a>
+    <a href="data-structures/union-find.html" class="algo-card" data-tags="data structure union find disjoint set connected components">
+      <h3>Union-Find</h3>
+      <p>Disjoint set structure with union by rank and path compression.</p>
+      <span class="card-tag">O(&alpha;(n))</span>
+    </a>
+  </div>
+  </div>
+
+  <!-- Graph -->
+  <div class="category-section" data-category="graph">
+  <h2 class="category-heading" id="graph">Graph Algorithms</h2>
+  <div class="algo-grid">
+    <a href="graph/bfs.html" class="algo-card" data-tags="graph bfs breadth first search traversal shortest">
+      <h3>Breadth-First Search</h3>
+      <p>Explores all neighbors at present depth before moving deeper.</p>
+      <span class="card-tag">O(V + E)</span>
+    </a>
+    <a href="graph/dfs.html" class="algo-card" data-tags="graph dfs depth first search traversal backtrack">
+      <h3>Depth-First Search</h3>
+      <p>Explores as far as possible along each branch before backtracking.</p>
+      <span class="card-tag">O(V + E)</span>
+    </a>
+    <a href="graph/dijkstra.html" class="algo-card" data-tags="graph dijkstra shortest path weighted greedy">
+      <h3>Dijkstra's Algorithm</h3>
+      <p>Finds shortest paths from a source to all vertices.</p>
+      <span class="card-tag">O(V&sup2;)</span>
+    </a>
+    <a href="graph/bellman-ford.html" class="algo-card" data-tags="graph bellman ford shortest path negative weight relax">
+      <h3>Bellman-Ford</h3>
+      <p>Finds shortest paths even with negative edge weights. Detects negative cycles.</p>
+      <span class="card-tag">O(VE)</span>
+    </a>
+    <a href="graph/kruskal.html" class="algo-card" data-tags="graph kruskal mst minimum spanning tree greedy">
+      <h3>Kruskal's MST</h3>
+      <p>Builds minimum spanning tree by picking smallest edges.</p>
+      <span class="card-tag">O(E log E)</span>
+    </a>
+    <a href="graph/prims.html" class="algo-card" data-tags="graph prim mst minimum spanning tree greedy priority">
+      <h3>Prim's MST</h3>
+      <p>Grows the minimum spanning tree one vertex at a time using a priority queue.</p>
+      <span class="card-tag">O(E log V)</span>
+    </a>
+    <a href="graph/topological-sort.html" class="algo-card" data-tags="graph topological sort dag directed acyclic order">
+      <h3>Topological Sort</h3>
+      <p>Linear ordering of vertices in a directed acyclic graph.</p>
+      <span class="card-tag">O(V + E)</span>
+    </a>
+  </div>
+  </div>
+
+  <!-- DP -->
+  <div class="category-section" data-category="dp">
+  <h2 class="category-heading" id="dp">Dynamic Programming</h2>
+  <div class="algo-grid">
+    <a href="dp/fibonacci.html" class="algo-card" data-tags="dp dynamic programming fibonacci memoization tabulation">
+      <h3>Fibonacci</h3>
+      <p>Memoization vs tabulation approaches to compute Fibonacci numbers.</p>
+      <span class="card-tag">O(n)</span>
+    </a>
+    <a href="dp/knapsack.html" class="algo-card" data-tags="dp dynamic programming knapsack weight value optimization">
+      <h3>0/1 Knapsack</h3>
+      <p>Maximize value with weight constraint using a 2D DP table.</p>
+      <span class="card-tag">O(nW)</span>
+    </a>
+    <a href="dp/lcs.html" class="algo-card" data-tags="dp dynamic programming lcs longest common subsequence string">
+      <h3>Longest Common Subsequence</h3>
+      <p>Find the longest subsequence common to two sequences.</p>
+      <span class="card-tag">O(mn)</span>
+    </a>
+    <a href="dp/coin-change.html" class="algo-card" data-tags="dp dynamic programming coin change minimum greedy">
+      <h3>Coin Change</h3>
+      <p>Find the minimum number of coins needed to make a given amount.</p>
+      <span class="card-tag">O(nS)</span>
+    </a>
+    <a href="dp/edit-distance.html" class="algo-card" data-tags="dp dynamic programming edit distance levenshtein string">
+      <h3>Edit Distance</h3>
+      <p>Minimum insertions, deletions, and substitutions to transform one string into another.</p>
+      <span class="card-tag">O(mn)</span>
+    </a>
+    <a href="dp/lis.html" class="algo-card" data-tags="dp dynamic programming lis longest increasing subsequence patience">
+      <h3>Longest Increasing Subsequence</h3>
+      <p>Find the length of the longest strictly increasing subsequence in an array.</p>
+      <span class="card-tag">O(n log n)</span>
+    </a>
+  </div>
+  </div>
+
+  <!-- Tree Traversals -->
+  <div class="category-section" data-category="tree">
+  <h2 class="category-heading" id="tree">Trees</h2>
+  <div class="algo-grid">
+    <a href="tree/traversals.html" class="algo-card" data-tags="tree traversal inorder preorder postorder level bfs dfs">
+      <h3>Tree Traversals</h3>
+      <p>Inorder, Preorder, Postorder, and Level Order traversals animated.</p>
+      <span class="card-tag">O(n)</span>
+    </a>
+  </div>
+  </div>
+
+  <!-- Pathfinding -->
+  <div class="category-section" data-category="pathfinding">
+  <h2 class="category-heading" id="pathfinding">Pathfinding</h2>
+  <div class="algo-grid">
+    <a href="pathfinding/a-star.html" class="algo-card" data-tags="pathfinding a star heuristic grid shortest path">
+      <h3>A* Search</h3>
+      <p>Heuristic-guided pathfinding on a grid — draw walls and watch.</p>
+      <span class="card-tag">Optimal</span>
+    </a>
+    <a href="pathfinding/maze-generation.html" class="algo-card" data-tags="pathfinding maze generation recursive backtracking">
+      <h3>Maze Generation</h3>
+      <p>Recursive backtracking to generate random mazes.</p>
+      <span class="card-tag">DFS-based</span>
+    </a>
+  </div>
+  </div>
+
+  <!-- String Algorithms -->
+  <div class="category-section" data-category="string">
+  <h2 class="category-heading" id="string">String Algorithms</h2>
+  <div class="algo-grid">
+    <a href="string/kmp.html" class="algo-card" data-tags="string kmp knuth morris pratt pattern matching prefix">
+      <h3>KMP Pattern Matching</h3>
+      <p>Efficient string search using a prefix failure function to avoid re-scanning.</p>
+      <span class="card-tag">O(n + m)</span>
+    </a>
+  </div>
+  </div>
+
+  <!-- Problem-Solving Patterns -->
+  <div class="category-section" data-category="patterns">
+  <h2 class="category-heading" id="patterns">Problem-Solving Patterns</h2>
+  <div class="algo-grid">
+    <a href="patterns/two-pointers.html" class="algo-card" data-tags="pattern two pointers sorted array converge">
+      <h3>Two Pointers</h3>
+      <p>Use two pointers converging from both ends to solve sorted array problems.</p>
+      <span class="card-tag">O(n)</span>
+    </a>
+    <a href="patterns/sliding-window.html" class="algo-card" data-tags="pattern sliding window subarray contiguous optimal">
+      <h3>Sliding Window</h3>
+      <p>Maintain a window that slides across the array for optimal subarrays.</p>
+      <span class="card-tag">O(n)</span>
+    </a>
+    <a href="patterns/fast-slow-pointers.html" class="algo-card" data-tags="pattern fast slow pointers floyd cycle detection linked list">
+      <h3>Fast & Slow Pointers</h3>
+      <p>Floyd's cycle detection — two pointers moving at different speeds.</p>
+      <span class="card-tag">O(n)</span>
+    </a>
+    <a href="patterns/merge-intervals.html" class="algo-card" data-tags="pattern merge intervals overlap scheduling">
+      <h3>Merge Intervals</h3>
+      <p>Sort and merge overlapping intervals into non-overlapping ones.</p>
+      <span class="card-tag">O(n log n)</span>
+    </a>
+    <a href="patterns/cyclic-sort.html" class="algo-card" data-tags="pattern cyclic sort missing number duplicate range">
+      <h3>Cyclic Sort</h3>
+      <p>Place each number at its correct index. Find missing or duplicate numbers in O(n).</p>
+      <span class="card-tag">O(n)</span>
+    </a>
+    <a href="patterns/binary-search-patterns.html" class="algo-card" data-tags="pattern binary search variations lower upper bound rotated peak">
+      <h3>Binary Search Variations</h3>
+      <p>Lower/upper bound, search in rotated array, peak finding, and more.</p>
+      <span class="card-tag">O(log n)</span>
+    </a>
+    <a href="patterns/subsets.html" class="algo-card" data-tags="pattern subsets backtracking permutation combination power set">
+      <h3>Subsets / Backtracking</h3>
+      <p>Generate all subsets, permutations, or combinations using backtracking.</p>
+      <span class="card-tag">O(2&#x207F;)</span>
+    </a>
+    <a href="patterns/top-k-elements.html" class="algo-card" data-tags="pattern top k elements heap frequency kth largest">
+      <h3>Top K Elements</h3>
+      <p>Use a min-heap of size K to efficiently find the K largest elements.</p>
+      <span class="card-tag">O(n log k)</span>
+    </a>
+    <a href="patterns/monotonic-stack.html" class="algo-card" data-tags="pattern monotonic stack next greater element temperature span">
+      <h3>Monotonic Stack</h3>
+      <p>Maintain a monotonic stack for Next Greater Element type problems.</p>
+      <span class="card-tag">O(n)</span>
+    </a>
+  </div>
+  </div>
+
+  <div style="text-align:center;padding:3rem 1rem;color:#616161;font-size:0.65rem;">
+    Built by Gaurav Chaurasia &bull; <a href="../index.html" style="color:#000;font-weight:500;">Back to Portfolio</a>
+  </div>
+
+<script>
+document.getElementById('search').addEventListener('input', function(){
+  const q = this.value.toLowerCase().trim();
+  const sections = document.querySelectorAll('.category-section');
+  let totalVisible = 0;
+  sections.forEach(sec => {
+    const cards = sec.querySelectorAll('.algo-card');
+    let sectionVisible = 0;
+    cards.forEach(card => {
+      const text = (card.textContent + ' ' + (card.dataset.tags || '')).toLowerCase();
+      const match = !q || text.includes(q);
+      card.classList.toggle('hidden', !match);
+      if(match) sectionVisible++;
+    });
+    sec.classList.toggle('hidden', sectionVisible === 0);
+    totalVisible += sectionVisible;
+  });
+  document.getElementById('noResults').style.display = (q && totalVisible === 0) ? 'block' : 'none';
+});
+</script>
+</body>
+</html>
